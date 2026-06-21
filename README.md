@@ -5,17 +5,24 @@
 ### Docker
 
 ```bash
-docker compose down && docker compose up -d && docker logs -f sglang-router sglang-router
+docker compose down && docker compose up -d && docker logs -f sglang-router
+```
+
+
+```bash
+docker compose down
+docker compose up -d
+docker logs -f sglang-router
 ```
 
 ```bash
 docker run --rm ghcr.io/ggml-org/llama.cpp:server-cuda --help
 ```
 
+### Power limit
+
 ```bash
-docker compose down
-docker compose up -d
-docker logs -f sglang-router sglang-router
+sudo nvidia-smi -i 0 -pl 300
 ```
 
 ### Monitoring
