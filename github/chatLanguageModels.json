@@ -1,0 +1,163 @@
+[
+	{
+		"name": "SGLang",
+		"vendor": "customendpoint",
+		"apiKey": "${input:chat.lm.secret.6c458157}",
+		"models": [
+			{
+				"id": "Qwopus-27B-Coder-120K-MTP",
+				"name": "Qwopus-27B-Coder (MTP/120K)",
+				"url": "http://172.16.1.110:10005/v1/chat/completions",
+				"toolCalling": true,
+				"vision": false,
+				"streaming": true,
+				"apiType": "chat-completions",
+				"editTools": [
+					"apply-patch",
+					"code-rewrite",
+					"find-replace",
+					"multi-find-replace"
+				],
+				"thinking": true,
+				"supportsReasoningEffort": [
+					"low",
+					"medium",
+					"high"
+				],
+				"reasoningEffortFormat": "chat-completions",
+				"zeroDataRetentionEnabled": false,
+				"maxInputTokens": 90832,
+				"maxOutputTokens": 30000
+			},
+			{
+				"id": "Qwopus-27B-Coder-160K-Vision",
+				"name": "Qwopus-27B-Coder (Vision/160K)",
+				"url": "http://172.16.1.110:10005/v1/chat/completions",
+				"toolCalling": true,
+				"vision": true,
+				"streaming": true,
+				"apiType": "chat-completions",
+				"editTools": [
+					"apply-patch",
+					"code-rewrite",
+					"find-replace",
+					"multi-find-replace"
+				],
+				"thinking": true,
+				"supportsReasoningEffort": [
+					"low",
+					"medium",
+					"high"
+				],
+				"reasoningEffortFormat": "chat-completions",
+				"zeroDataRetentionEnabled": false,
+				"maxInputTokens": 121344,
+				"maxOutputTokens": 40448
+			},
+			{
+				"id": "SuperGemma-26B-Uncensored",
+				"name": "SuperGemma-26B-Uncensored (64K)",
+				"url": "http://172.16.1.110:10005/v1/chat/completions",
+				"toolCalling": true,
+				"vision": false,
+				"streaming": true,
+				"apiType": "chat-completions",
+				"editTools": [
+					"apply-patch",
+					"code-rewrite",
+					"find-replace",
+					"multi-find-replace"
+				],
+				"thinking": true,
+				"supportsReasoningEffort": [
+					"low",
+					"medium",
+					"high"
+				],
+				"reasoningEffortFormat": "chat-completions",
+				"zeroDataRetentionEnabled": false,
+				"maxInputTokens": 49152,
+				"maxOutputTokens": 16384
+			}
+		],
+		"settings": {
+			"Qwopus-27B-Coder-120K-MTP": {
+				"reasoningEffort": "high"
+			},
+			"Qwopus-27B-Coder-160K-Vision": {
+				"reasoningEffort": "high"
+			},
+			"SuperGemma-26B-Uncensored": {
+				"reasoningEffort": "high"
+			}
+		}
+	},
+	{
+		"name": "DeepSeek",
+		"vendor": "customendpoint",
+		"apiKey": "${input:chat.lm.secret.770b50a9}",
+		"usagePortal": "https://platform.deepseek.com/usage",
+		"models": [
+			{
+				"id": "deepseek-v4-flash",
+				"name": "DeepSeek V4 Flash",
+				"url": "https://api.deepseek.com/v1/chat/completions",
+				"apiType": "chat-completions",
+				"toolCalling": true,
+				"vision": true,
+				"streaming": true,
+				"editTools": [
+					"apply-patch",
+					"code-rewrite",
+					"find-replace",
+					"multi-find-replace"
+				],
+				"supportsReasoningEffort": [
+					"low",
+					"high",
+					"max"
+				],
+				"reasoningEffortFormat": "chat-completions",
+				"thinking": true,
+				"zeroDataRetentionEnabled": false,
+				"maxInputTokens": 750000,
+				"maxOutputTokens": 250000
+			},
+			{
+				"id": "deepseek-v4-pro",
+				"name": "DeepSeek V4 Pro",
+				"url": "https://api.deepseek.com/v1/chat/completions",
+				"apiType": "chat-completions",
+				"toolCalling": true,
+				"vision": true,
+				"streaming": true,
+				"editTools": [
+					"apply-patch",
+					"code-rewrite",
+					"find-replace",
+					"multi-find-replace"
+				],
+				"supportsReasoningEffort": [
+					"low",
+					"high",
+					"max"
+				],
+				"reasoningEffortFormat": "chat-completions",
+				"thinking": true,
+				"zeroDataRetentionEnabled": false,
+				"maxInputTokens": 750000,
+				"maxOutputTokens": 250000
+			}
+		],
+		"settings": {
+			"deepseek-v4-pro": {
+				"reasoningEffort": "max"
+			}
+		}
+	},
+	{
+		"name": "OpenRouter",
+		"vendor": "openrouter",
+		"apiKey": "${input:chat.lm.secret.3f1fab8d}"
+	}
+]

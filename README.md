@@ -8,7 +8,6 @@
 docker compose down && docker compose up -d && docker logs -f sglang-router
 ```
 
-
 ```bash
 docker compose down
 docker compose up -d
@@ -33,4 +32,10 @@ watch nvidia-smi -i 0
 
 ```bash
 nvtop
+```
+
+### Hugging Face
+
+```bash
+hf download  DAXZEIT/Qwen3.6-27B-Claude-Opus-Reasoning-Distilled-UD-Q4_K_XL-gguf --local-dir DAXZEIT/Qwen3.6-27B-Claude-Opus-Reasoning-Distilled-UD-Q4_K_XL-gguf  --include "**"
 ```
