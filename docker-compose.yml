@@ -26,6 +26,7 @@ services:
       -b 4096
       -ub 1024
       --context-shift
+      --no-warmup
 
 
 
