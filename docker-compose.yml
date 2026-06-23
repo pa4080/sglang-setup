@@ -18,13 +18,10 @@ services:
     environment:
       - LLAMA_API_KEY=${LLAMA_API_KEY}
     command: >
-      --models-preset /app/router.ini
-      --models-max 1
       --host 0.0.0.0
       --port 10005
-      --flash-attn on
-      -b 4096
-      -ub 1024
+      --models-preset /app/router.ini
+      --models-max 1
       --context-shift
       --no-warmup
 
