@@ -5,8 +5,33 @@
 		"apiKey": "${input:chat.lm.secret.-4b1abccd}",
 		"models": [
 			{
-				"id": "Qwopus-27B-Coder-120K-MTP-Q4",
-				"name": "Qwopus-27B-Coder (MTP/Q4/120K)",
+				"id": "Qwopus-27B-Coder-160K-MTP-Q4",
+				"name": "Qwopus-27B-Coder Fast 164K/Q4/MTP",
+				"url": "http://172.16.1.110:10005/v1/chat/completions",
+				"toolCalling": true,
+				"vision": false,
+				"streaming": true,
+				"apiType": "chat-completions",
+				"editTools": [
+					"apply-patch",
+					"code-rewrite",
+					"find-replace",
+					"multi-find-replace"
+				],
+				"thinking": true,
+				"supportsReasoningEffort": [
+					"low",
+					"medium",
+					"high"
+				],
+				"reasoningEffortFormat": "chat-completions",
+				"zeroDataRetentionEnabled": false,
+				"maxInputTokens": 122880,
+				"maxOutputTokens": 40960
+			},
+			{
+				"id": "Qwopus-27B-Coder-122K-MTP-Q8",
+				"name": "Qwopus-27B-Coder Fast 122K/Q8/MTP",
 				"url": "http://172.16.1.110:10005/v1/chat/completions",
 				"toolCalling": true,
 				"vision": false,
@@ -30,33 +55,8 @@
 				"maxOutputTokens": 30720
 			},
 			{
-				"id": "Qwopus-27B-Coder-120K-MTP-Q8",
-				"name": "Qwopus-27B-Coder 120K/Q8/MTP",
-				"url": "http://172.16.1.110:10005/v1/chat/completions",
-				"toolCalling": true,
-				"vision": false,
-				"streaming": true,
-				"apiType": "chat-completions",
-				"editTools": [
-					"apply-patch",
-					"code-rewrite",
-					"find-replace",
-					"multi-find-replace"
-				],
-				"thinking": true,
-				"supportsReasoningEffort": [
-					"low",
-					"medium",
-					"high"
-				],
-				"reasoningEffortFormat": "chat-completions",
-				"zeroDataRetentionEnabled": false,
-				"maxInputTokens": 92160,
-				"maxOutputTokens": 30720
-			},
-			{
-				"id": "Qwopus-27B-Coder-160K-Vision-Q4",
-				"name": "Qwopus-27B-Coder 160K/Q4/Vision",
+				"id": "Qwopus-27B-Coder-256K-Vision-Q4",
+				"name": "Qwopus-27B-Coder 256K/Q4/Vision",
 				"url": "http://172.16.1.110:10005/v1/chat/completions",
 				"toolCalling": true,
 				"vision": true,
@@ -76,12 +76,12 @@
 				],
 				"reasoningEffortFormat": "chat-completions",
 				"zeroDataRetentionEnabled": false,
-				"maxInputTokens": 121344,
-				"maxOutputTokens": 40448
+				"maxInputTokens": 196608,
+				"maxOutputTokens": 65536
 			},
 			{
 				"id": "Qwopus-27B-Coder-160K-Vision-Q8",
-				"name": "Qwopus-27B-Coder 160K/Q8/Vision",
+				"name": "Qwopus-27B-Coder 164K/Q8/Vision",
 				"url": "http://172.16.1.110:10005/v1/chat/completions",
 				"toolCalling": true,
 				"vision": true,
@@ -101,12 +101,12 @@
 				],
 				"reasoningEffortFormat": "chat-completions",
 				"zeroDataRetentionEnabled": false,
-				"maxInputTokens": 121344,
-				"maxOutputTokens": 40448
+				"maxInputTokens": 122880,
+				"maxOutputTokens": 40960
 			},
 			{
 				"id": "Gemma-4-26B-A4B-it-qat-MTP-Vision-128K-Q8",
-				"name": "Gemma-4-26B 128K/Q8/MTP/Vision",
+				"name": "Gemma-4-26B Fast 128K/Q8/MTP/Vision",
 				"url": "http://172.16.1.110:10005/v1/chat/completions",
 				"toolCalling": true,
 				"vision": true,
@@ -131,7 +131,7 @@
 			},
 			{
 				"id": "Gemma-4-26B-A4B-it-qat-Vision-128K-Q8",
-				"name": "Gemma-4-26B (128K/Q8/Vision)",
+				"name": "Gemma-4-26B 128K/Q8/Vision",
 				"url": "http://172.16.1.110:10005/v1/chat/completions",
 				"toolCalling": true,
 				"vision": true,
@@ -155,22 +155,6 @@
 				"maxOutputTokens": 32768
 			}
 		],
-		"settings": {
-			"Qwopus-27B-Coder-120K-MTP-Q4": {
-				"reasoningEffort": "high"
-			},
-			"Qwopus-27B-Coder-120K-MTP-Q8": {
-				"reasoningEffort": "high"
-			},
-			"Qwopus-27B-Coder-160K-Vision": {
-				"reasoningEffort": "high"
-			},
-			"Gemma-4-26B-A4B-it-qat-MTP-Vision-128K-Q8": {
-				"reasoningEffort": "high"
-			},
-			"Gemma-4-26B-A4B-it-qat-Vision-128K-Q8": {
-				"reasoningEffort": "high"
-			}
-		}
+		"settings": {}
 	}
 ]
