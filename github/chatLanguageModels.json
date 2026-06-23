@@ -2,39 +2,14 @@
 	{
 		"name": "SGLang",
 		"vendor": "customendpoint",
-		"apiKey": "${input:chat.lm.secret.6c458157}",
+		"apiKey": "${input:chat.lm.secret.-4b1abccd}",
 		"models": [
 			{
-				"id": "Qwopus-27B-Coder-120K-MTP",
-				"name": "Qwopus-27B-Coder (MTP/120K)",
+				"id": "Qwopus-27B-Coder-120K-MTP-Q4",
+				"name": "Qwopus-27B-Coder (MTP/Q4/120K)",
 				"url": "http://172.16.1.110:10005/v1/chat/completions",
 				"toolCalling": true,
 				"vision": false,
-				"streaming": true,
-				"apiType": "chat-completions",
-				"editTools": [
-					"apply-patch",
-					"code-rewrite",
-					"find-replace",
-					"multi-find-replace"
-				],
-				"thinking": true,
-				"supportsReasoningEffort": [
-					"low",
-					"medium",
-					"high"
-				],
-				"reasoningEffortFormat": "chat-completions",
-				"zeroDataRetentionEnabled": false,
-				"maxInputTokens": 90832,
-				"maxOutputTokens": 30000
-			},
-			{
-				"id": "Qwopus-27B-Coder-120K-MTP-Vision",
-				"name": "Qwopus-27B-Coder (MTP/Vision/120K)",
-				"url": "http://172.16.1.110:10005/v1/chat/completions",
-				"toolCalling": true,
-				"vision": true,
 				"streaming": true,
 				"apiType": "chat-completions",
 				"editTools": [
@@ -55,8 +30,33 @@
 				"maxOutputTokens": 30720
 			},
 			{
-				"id": "Qwopus-27B-Coder-160K-Vision",
-				"name": "Qwopus-27B-Coder (Vision/160K)",
+				"id": "Qwopus-27B-Coder-120K-MTP-Q8",
+				"name": "Qwopus-27B-Coder 120K/Q8/MTP",
+				"url": "http://172.16.1.110:10005/v1/chat/completions",
+				"toolCalling": true,
+				"vision": false,
+				"streaming": true,
+				"apiType": "chat-completions",
+				"editTools": [
+					"apply-patch",
+					"code-rewrite",
+					"find-replace",
+					"multi-find-replace"
+				],
+				"thinking": true,
+				"supportsReasoningEffort": [
+					"low",
+					"medium",
+					"high"
+				],
+				"reasoningEffortFormat": "chat-completions",
+				"zeroDataRetentionEnabled": false,
+				"maxInputTokens": 92160,
+				"maxOutputTokens": 30720
+			},
+			{
+				"id": "Qwopus-27B-Coder-160K-Vision-Q4",
+				"name": "Qwopus-27B-Coder 160K/Q4/Vision",
 				"url": "http://172.16.1.110:10005/v1/chat/completions",
 				"toolCalling": true,
 				"vision": true,
@@ -80,11 +80,11 @@
 				"maxOutputTokens": 40448
 			},
 			{
-				"id": "SuperGemma-26B-Uncensored",
-				"name": "SuperGemma-26B-Uncensored (64K)",
+				"id": "Qwopus-27B-Coder-160K-Vision-Q8",
+				"name": "Qwopus-27B-Coder 160K/Q8/Vision",
 				"url": "http://172.16.1.110:10005/v1/chat/completions",
 				"toolCalling": true,
-				"vision": false,
+				"vision": true,
 				"streaming": true,
 				"apiType": "chat-completions",
 				"editTools": [
@@ -101,15 +101,40 @@
 				],
 				"reasoningEffortFormat": "chat-completions",
 				"zeroDataRetentionEnabled": false,
-				"maxInputTokens": 49152,
-				"maxOutputTokens": 16384
+				"maxInputTokens": 121344,
+				"maxOutputTokens": 40448
 			},
 			{
-				"id": "Gemma4-12B-MTP-128K",
-				"name": "Gemma4-12B v2 (MTP/128K)",
+				"id": "Gemma-4-26B-A4B-it-qat-MTP-Vision-128K-Q8",
+				"name": "Gemma-4-26B 128K/Q8/MTP/Vision",
 				"url": "http://172.16.1.110:10005/v1/chat/completions",
 				"toolCalling": true,
-				"vision": false,
+				"vision": true,
+				"streaming": true,
+				"apiType": "chat-completions",
+				"editTools": [
+					"apply-patch",
+					"code-rewrite",
+					"find-replace",
+					"multi-find-replace"
+				],
+				"thinking": true,
+				"supportsReasoningEffort": [
+					"low",
+					"medium",
+					"high"
+				],
+				"reasoningEffortFormat": "chat-completions",
+				"zeroDataRetentionEnabled": false,
+				"maxInputTokens": 98304,
+				"maxOutputTokens": 32768
+			},
+			{
+				"id": "Gemma-4-26B-A4B-it-qat-Vision-128K-Q8",
+				"name": "Gemma-4-26B (128K/Q8/Vision)",
+				"url": "http://172.16.1.110:10005/v1/chat/completions",
+				"toolCalling": true,
+				"vision": true,
 				"streaming": true,
 				"apiType": "chat-completions",
 				"editTools": [
@@ -131,19 +156,19 @@
 			}
 		],
 		"settings": {
-			"Qwopus-27B-Coder-120K-MTP": {
+			"Qwopus-27B-Coder-120K-MTP-Q4": {
 				"reasoningEffort": "high"
 			},
-			"Qwopus-27B-Coder-120K-MTP-Vision": {
+			"Qwopus-27B-Coder-120K-MTP-Q8": {
 				"reasoningEffort": "high"
 			},
 			"Qwopus-27B-Coder-160K-Vision": {
 				"reasoningEffort": "high"
 			},
-			"SuperGemma-26B-Uncensored": {
+			"Gemma-4-26B-A4B-it-qat-MTP-Vision-128K-Q8": {
 				"reasoningEffort": "high"
 			},
-			"Gemma4-12B-MTP-128K": {
+			"Gemma-4-26B-A4B-it-qat-Vision-128K-Q8": {
 				"reasoningEffort": "high"
 			}
 		}
