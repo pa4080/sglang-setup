@@ -23,6 +23,7 @@ services:
       --models-preset /app/router.ini
       --models-max 1
       --context-shift
+      --ctx-checkpoints 4
       --no-warmup
 
 

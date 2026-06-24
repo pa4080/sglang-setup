@@ -278,8 +278,98 @@
 				"zeroDataRetentionEnabled": false,
 				"maxInputTokens": 98304,
 				"maxOutputTokens": 32768
+			},
+			{
+				"id": "Qwen36-35B-A3B-MTP-Vision-256K-Q4",
+				"name": "Qwen3.6 35B Fast 256K/Q4/MTP/Vision",
+				"url": "http://172.16.1.110:10005/v1/chat/completions",
+				"toolCalling": true,
+				"vision": true,
+				"streaming": true,
+				"apiType": "chat-completions",
+				"editTools": [
+					"apply-patch",
+					"code-rewrite",
+					"find-replace",
+					"multi-find-replace"
+				],
+				"thinking": true,
+				"supportsReasoningEffort": [
+					"low",
+					"medium",
+					"high"
+				],
+				"reasoningEffortFormat": "chat-completions",
+				"zeroDataRetentionEnabled": false,
+				"maxInputTokens": 196608,
+				"maxOutputTokens": 65536
+			},
+			{
+				"id": "Qwen36-35B-A3B-MTP-Vision-256K-Q8",
+				"name": "Qwen3.6 35B Fast 256K/Q8/MTP/Vision",
+				"url": "http://172.16.1.110:10005/v1/chat/completions",
+				"toolCalling": true,
+				"vision": true,
+				"streaming": true,
+				"apiType": "chat-completions",
+				"editTools": [
+					"apply-patch",
+					"code-rewrite",
+					"find-replace",
+					"multi-find-replace"
+				],
+				"thinking": true,
+				"supportsReasoningEffort": [
+					"low",
+					"medium",
+					"high"
+				],
+				"reasoningEffortFormat": "chat-completions",
+				"zeroDataRetentionEnabled": false,
+				"maxInputTokens": 196608,
+				"maxOutputTokens": 65536
 			}
 		],
-		"settings": {}
+		"settings": {
+			"Qwopus-27B-Coder-160K-MTP-Q4": {
+				"reasoningEffort": "high"
+			},
+			"Qwopus-27B-Coder-122K-MTP-Q8": {
+				"reasoningEffort": "high"
+			},
+			"Qwopus-27B-Coder-256K-Vision-Q4": {
+				"reasoningEffort": "high"
+			},
+			"Qwopus-27B-Coder-160K-Vision-Q8": {
+				"reasoningEffort": "high"
+			},
+			"Gemma-4-26B-A4B-it-qat-MTP-Vision-128K-Q8": {
+				"reasoningEffort": "high"
+			},
+			"Gemma-4-26B-A4B-it-qat-Vision-128K-Q8": {
+				"reasoningEffort": "high"
+			},
+			"Gemma-4-26B-A4B-it-qat-MTP-Vision-256K-Q8": {
+				"reasoningEffort": "high"
+			},
+			"Gemma-4-26B-A4B-it-qat-Vision-256K-Q8": {
+				"reasoningEffort": "high"
+			},
+			"Gemma-4-31B-it-qat-MTP-Vision-108K-Q4": {
+				"reasoningEffort": "high"
+			},
+			"Gemma-4-31B-it-qat-Vision-116K-Q4": {
+				"reasoningEffort": "high"
+			},
+			"Gemma-4-31B-it-qat-MTP-128K-Q4": {
+				"reasoningEffort": "high"
+			},
+			"Qwen36-35B-A3B-MTP-Vision-256K-Q4": {
+				"reasoningEffort": "high"
+			},
+			"Qwen36-35B-A3B-MTP-Vision-256K-Q8": {
+				"reasoningEffort": "high"
+			}
+		}
 	}
 ]
