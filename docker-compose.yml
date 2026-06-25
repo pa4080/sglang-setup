@@ -23,10 +23,13 @@ services:
       --models-max 1
       --no-warmup
       --context-shift
-      --ctx-checkpoints 4
-      --swa-checkpoints 4
+      --ctx-checkpoints 2
+      --swa-checkpoints 2
       --cache-ram 24576
-      --cache-reuse 4096
+      --cache-reuse 1024
+      --rope-scaling yarn
+      --rope-scale 4
+      --yarn-orig-ctx 32768
 
 
 

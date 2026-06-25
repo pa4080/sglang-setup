@@ -6,7 +6,7 @@
 		"models": [
 			{
 				"id": "Qwopus-27B-Coder-160K-MTP-Q4",
-				"name": "Qwopus-27B-Coder Fast 164K/Q4/MTP",
+				"name": "Qwopus-27B-Coder-160K-MTP-Q4",
 				"url": "http://172.16.1.110:10005/v1/chat/completions",
 				"toolCalling": true,
 				"vision": false,
@@ -31,7 +31,7 @@
 			},
 			{
 				"id": "Qwopus-27B-Coder-122K-MTP-Q8",
-				"name": "Qwopus-27B-Coder Fast 122K/Q8/MTP",
+				"name": "Qwopus-27B-Coder-122K-MTP-Q8",
 				"url": "http://172.16.1.110:10005/v1/chat/completions",
 				"toolCalling": true,
 				"vision": false,
@@ -56,7 +56,7 @@
 			},
 			{
 				"id": "Qwopus-27B-Coder-256K-Vision-Q4",
-				"name": "Qwopus-27B-Coder 256K/Q4/Vision",
+				"name": "Qwopus-27B-Coder-256K-Vision-Q4",
 				"url": "http://172.16.1.110:10005/v1/chat/completions",
 				"toolCalling": true,
 				"vision": true,
@@ -81,7 +81,7 @@
 			},
 			{
 				"id": "Qwopus-27B-Coder-160K-Vision-Q8",
-				"name": "Qwopus-27B-Coder 164K/Q8/Vision",
+				"name": "Qwopus-27B-Coder-160K-Vision-Q8",
 				"url": "http://172.16.1.110:10005/v1/chat/completions",
 				"toolCalling": true,
 				"vision": true,
@@ -105,8 +105,33 @@
 				"maxOutputTokens": 40960
 			},
 			{
+				"id": "Qwopus-27B-Coder-128K-Vision-Q8",
+				"name": "Qwopus-27B-Coder-128K-Vision-Q8",
+				"url": "http://172.16.1.110:10005/v1/chat/completions",
+				"toolCalling": true,
+				"vision": true,
+				"streaming": true,
+				"apiType": "chat-completions",
+				"editTools": [
+					"apply-patch",
+					"code-rewrite",
+					"find-replace",
+					"multi-find-replace"
+				],
+				"thinking": true,
+				"supportsReasoningEffort": [
+					"low",
+					"medium",
+					"high"
+				],
+				"reasoningEffortFormat": "chat-completions",
+				"zeroDataRetentionEnabled": false,
+				"maxInputTokens": 98304,
+				"maxOutputTokens": 32768
+			},
+			{
 				"id": "Gemma-4-26B-A4B-it-qat-MTP-Vision-128K-Q8",
-				"name": "Gemma-4-26B Fast 128K/Q8/MTP/Vision",
+				"name": "Gemma-4-26B-A4B-it-qat-MTP-Vision-128K-Q8",
 				"url": "http://172.16.1.110:10005/v1/chat/completions",
 				"toolCalling": true,
 				"vision": true,
@@ -131,7 +156,7 @@
 			},
 			{
 				"id": "Gemma-4-26B-A4B-it-qat-Vision-128K-Q8",
-				"name": "Gemma-4-26B 128K/Q8/Vision",
+				"name": "Gemma-4-26B-A4B-it-qat-Vision-128K-Q8",
 				"url": "http://172.16.1.110:10005/v1/chat/completions",
 				"toolCalling": true,
 				"vision": true,
@@ -156,7 +181,7 @@
 			},
 			{
 				"id": "Gemma-4-26B-A4B-it-qat-MTP-Vision-256K-Q8",
-				"name": "Gemma-4-26B Fast 256K/Q8/MTP/Vision",
+				"name": "Gemma-4-26B-A4B-it-qat-MTP-Vision-256K-Q8",
 				"url": "http://172.16.1.110:10005/v1/chat/completions",
 				"toolCalling": true,
 				"vision": true,
@@ -181,7 +206,7 @@
 			},
 			{
 				"id": "Gemma-4-26B-A4B-it-qat-Vision-256K-Q8",
-				"name": "Gemma-4-26B 256K/Q8/Vision",
+				"name": "Gemma-4-26B-A4B-it-qat-Vision-256K-Q8",
 				"url": "http://172.16.1.110:10005/v1/chat/completions",
 				"toolCalling": true,
 				"vision": true,
@@ -206,7 +231,7 @@
 			},
 			{
 				"id": "Gemma-4-31B-it-qat-MTP-Vision-108K-Q4",
-				"name": "Gemma-4-31B Fast 108K/Q4/MTP/Vision",
+				"name": "Gemma-4-31B-it-qat-MTP-Vision-108K-Q4",
 				"url": "http://172.16.1.110:10005/v1/chat/completions",
 				"toolCalling": true,
 				"vision": true,
@@ -231,7 +256,7 @@
 			},
 			{
 				"id": "Gemma-4-31B-it-qat-Vision-116K-Q4",
-				"name": "Gemma-4-31B 116K/Q4/Vision",
+				"name": "Gemma-4-31B-it-qat-Vision-116K-Q4",
 				"url": "http://172.16.1.110:10005/v1/chat/completions",
 				"toolCalling": true,
 				"vision": true,
@@ -256,7 +281,7 @@
 			},
 			{
 				"id": "Gemma-4-31B-it-qat-MTP-128K-Q4",
-				"name": "Gemma-4-31B Fast 128K/Q4/MTP",
+				"name": "Gemma-4-31B-it-qat-MTP-128K-Q4",
 				"url": "http://172.16.1.110:10005/v1/chat/completions",
 				"toolCalling": true,
 				"vision": true,
@@ -281,7 +306,7 @@
 			},
 			{
 				"id": "Qwen36-35B-A3B-MTP-Vision-256K-Q4",
-				"name": "Qwen3.6 35B Fast 256K/Q4/MTP/Vision",
+				"name": "Qwen36-35B-A3B-MTP-Vision-256K-Q4",
 				"url": "http://172.16.1.110:10005/v1/chat/completions",
 				"toolCalling": true,
 				"vision": true,
@@ -306,7 +331,7 @@
 			},
 			{
 				"id": "Qwen36-35B-A3B-MTP-Vision-256K-Q8",
-				"name": "Qwen3.6 35B Fast 256K/Q8/MTP/Vision",
+				"name": "Qwen36-35B-A3B-MTP-Vision-256K-Q8",
 				"url": "http://172.16.1.110:10005/v1/chat/completions",
 				"toolCalling": true,
 				"vision": true,
@@ -393,6 +418,9 @@
 			"Qwopus-27B-Coder-160K-Vision-Q8": {
 				"reasoningEffort": "high"
 			},
+			"Qwopus-27B-Coder-128K-Vision-Q8": {
+				"reasoningEffort": "high"
+			},
 			"Gemma-4-26B-A4B-it-qat-MTP-Vision-128K-Q8": {
 				"reasoningEffort": "high"
 			},
@@ -418,6 +446,12 @@
 				"reasoningEffort": "high"
 			},
 			"Qwen36-35B-A3B-MTP-Vision-256K-Q8": {
+				"reasoningEffort": "high"
+			},
+			"Qwen36-35B-A3B-MTP-256K-Q8": {
+				"reasoningEffort": "high"
+			},
+			"Qwen36-35B-A3B-Vision-256K-Q8": {
 				"reasoningEffort": "high"
 			}
 		}
