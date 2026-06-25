@@ -39,3 +39,7 @@ nvtop
 ```bash
 hf download  DAXZEIT/Qwen3.6-27B-Claude-Opus-Reasoning-Distilled-UD-Q4_K_XL-gguf --local-dir DAXZEIT/Qwen3.6-27B-Claude-Opus-Reasoning-Distilled-UD-Q4_K_XL-gguf  --include "**"
 ```
+
+## Refs
+
+- <https://github.com/ggml-org/llama.cpp/pull/13194#issuecomment-2868343055>

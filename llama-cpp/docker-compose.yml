@@ -26,7 +26,7 @@ services:
       --ctx-checkpoints 2
       --swa-checkpoints 2
       --cache-ram 24576
-      --cache-reuse 1024
+      --cache-reuse 4096
       --rope-scaling yarn
       --rope-scale 4
       --yarn-orig-ctx 32768

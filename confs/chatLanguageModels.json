@@ -5,6 +5,43 @@
 		"apiKey": "${input:chat.lm.secret.-4b1abccd}",
 		"models": [
 			{
+				"id": "Qwen3.6-35B-A3B-UD-IQ4_NL",
+				"name": "Qwen3.6-35B-A3B-UD-IQ4_NL",
+				"url": "http://172.16.1.110:10005/v1/chat/completions",
+				"toolCalling": true,
+				"vision": true,
+				"streaming": true,
+				"apiType": "chat-completions",
+				"editTools": [
+					"apply-patch",
+					"code-rewrite",
+					"find-replace",
+					"multi-find-replace"
+				],
+				"thinking": true,
+				"supportsReasoningEffort": [
+					"low",
+					"medium",
+					"high"
+				],
+				"reasoningEffortFormat": "chat-completions",
+				"zeroDataRetentionEnabled": false,
+				"maxInputTokens": 196608,
+				"maxOutputTokens": 65536
+			}
+		],
+		"settings": {
+			"Qwen3.6-35B-A3B-UD-IQ4_NL": {
+				"reasoningEffort": "high"
+			}
+		}
+	},
+	{
+		"name": "LLaMA.cpp",
+		"vendor": "customendpoint",
+		"apiKey": "${input:chat.lm.secret.-4b1abccd}",
+		"models": [
+			{
 				"id": "Qwopus-27B-Coder-160K-MTP-Q4",
 				"name": "Qwopus-27B-Coder-160K-MTP-Q4",
 				"url": "http://172.16.1.110:10005/v1/chat/completions",
