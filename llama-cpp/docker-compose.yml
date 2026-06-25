@@ -1,6 +1,6 @@
 services:
-  sglang-router:
-    container_name: sglang-router
+  llama-cpp:
+    container_name: llama-cpp
     image: ghcr.io/ggml-org/llama.cpp:server-cuda
     network_mode: host
     restart: unless-stopped

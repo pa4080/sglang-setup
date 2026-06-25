@@ -5,13 +5,13 @@
 ### Docker
 
 ```bash
-docker compose down && docker compose up -d && docker logs -f sglang-router
+docker compose down && docker compose up -d && docker logs -f llama-cpp
 ```
 
 ```bash
 docker compose down
 docker compose up -d
-docker logs -f sglang-router
+docker logs -f llama-cpp
 ```
 
 ```bash
