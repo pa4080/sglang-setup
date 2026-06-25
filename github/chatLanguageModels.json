@@ -328,6 +328,56 @@
 				"zeroDataRetentionEnabled": false,
 				"maxInputTokens": 196608,
 				"maxOutputTokens": 65536
+			},
+			{
+				"id": "Qwen36-35B-A3B-MTP-256K-Q8",
+				"name": "Qwen36-35B-A3B-MTP-256K-Q8",
+				"url": "http://172.16.1.110:10005/v1/chat/completions",
+				"toolCalling": true,
+				"vision": false,
+				"streaming": true,
+				"apiType": "chat-completions",
+				"editTools": [
+					"apply-patch",
+					"code-rewrite",
+					"find-replace",
+					"multi-find-replace"
+				],
+				"thinking": true,
+				"supportsReasoningEffort": [
+					"low",
+					"medium",
+					"high"
+				],
+				"reasoningEffortFormat": "chat-completions",
+				"zeroDataRetentionEnabled": false,
+				"maxInputTokens": 196608,
+				"maxOutputTokens": 65536
+			},
+			{
+				"id": "Qwen36-35B-A3B-Vision-256K-Q8",
+				"name": "Qwen36-35B-A3B-Vision-256K-Q8",
+				"url": "http://172.16.1.110:10005/v1/chat/completions",
+				"toolCalling": true,
+				"vision": true,
+				"streaming": true,
+				"apiType": "chat-completions",
+				"editTools": [
+					"apply-patch",
+					"code-rewrite",
+					"find-replace",
+					"multi-find-replace"
+				],
+				"thinking": true,
+				"supportsReasoningEffort": [
+					"low",
+					"medium",
+					"high"
+				],
+				"reasoningEffortFormat": "chat-completions",
+				"zeroDataRetentionEnabled": false,
+				"maxInputTokens": 196608,
+				"maxOutputTokens": 65536
 			}
 		],
 		"settings": {

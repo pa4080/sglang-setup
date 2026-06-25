@@ -7,7 +7,6 @@ services:
     volumes:
       - ./huggingface:/models
       - ./router.ini:/app/router.ini
-      - /mnt/data/lmstudio/models/lmstudio-community/Qwen3.6-27B-GGUF:/models2
     deploy:
       resources:
         reservations:
@@ -22,9 +21,12 @@ services:
       --port 10005
       --models-preset /app/router.ini
       --models-max 1
+      --no-warmup
       --context-shift
       --ctx-checkpoints 4
-      --no-warmup
+      --swa-checkpoints 4
+      --cache-ram 24576
+      --cache-reuse 4096
 
 
 
