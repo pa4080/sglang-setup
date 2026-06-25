@@ -35,10 +35,8 @@ services:
       --context-length 262144
       --port 8000
       --host 0.0.0.0
-      --mem-fraction-static 0.80
+      --mem-fraction-static 0.85
       --chunked-prefill-size 16384
-      --max-prefill-tokens 32768
       --watchdog-timeout 600
       --tp 1
-      --max-running-requests 24
-      --cuda-graph-max-bs 32
+      --max-running-requests 16
