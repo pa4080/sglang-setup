@@ -25,7 +25,7 @@ services:
       --context-shift
       --ctx-checkpoints 2
       --swa-checkpoints 2
-      --cache-ram 24576
+      --cache-ram 10240     # 10 GiB: limit concurrent cached sessions to ~2-3, prevent retry storms
       --cache-reuse 4096
       --rope-scaling yarn
       --rope-scale 4
