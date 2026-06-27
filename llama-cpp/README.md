@@ -9,6 +9,10 @@ docker compose down && docker compose up -d && docker logs -f llama-cpp
 ```
 
 ```bash
+docker compose down && docker compose up -d && docker logs -f llama-cpp 2>&1 | grep -i "context_length\|rope"
+```
+
+```bash
 docker compose down
 docker compose up -d
 docker logs -f llama-cpp
@@ -17,6 +21,8 @@ docker logs -f llama-cpp
 ```bash
 docker run --rm ghcr.io/ggml-org/llama.cpp:server-cuda --help
 ```
+
+
 
 ### Power limit
 

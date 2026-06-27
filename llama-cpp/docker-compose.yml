@@ -28,9 +28,6 @@ services:
       --swa-checkpoints 2
       --cache-ram 10240
       --cache-reuse 4096
-      --rope-scaling yarn
-      --rope-scale 4
-      --yarn-orig-ctx 32768
 
 
 
