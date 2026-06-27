@@ -16,6 +16,7 @@ services:
               capabilities: [gpu]
     environment:
       - LLAMA_API_KEY=${LLAMA_API_KEY}
+    # 10 GiB: limit concurrent cached sessions to ~2-3, prevent retry storms
     command: >
       --host 0.0.0.0
       --port 10005
@@ -25,7 +26,7 @@ services:
       --context-shift
       --ctx-checkpoints 2
       --swa-checkpoints 2
-      --cache-ram 10240     # 10 GiB: limit concurrent cached sessions to ~2-3, prevent retry storms
+      --cache-ram 10240
       --cache-reuse 4096
       --rope-scaling yarn
       --rope-scale 4

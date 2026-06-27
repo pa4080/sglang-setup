@@ -1,3 +1,6 @@
 .env*
 !.env.example
 huggingface/
+.server.pid
+serve.log
+.venv*
