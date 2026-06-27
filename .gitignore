@@ -4,3 +4,4 @@ huggingface/
 .server.pid
 serve.log
 .venv*
+nohup.out

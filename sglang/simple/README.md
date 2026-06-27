@@ -23,7 +23,8 @@ sudo apt install python3-full
 pipx install uv
 uv venv
 source .venv/bin/activate
-uv pip install sglang
+uv pip install sglang[all]
+uv pip install git+https://github.com/huggingface/transformers.git
 ```
 
 ### 1. Download the model
