@@ -1,24 +1,22 @@
-# Qwopus3.6-27B-Coder-MTP (SGLang Native)
+# Gemma-4-E4B-IT-Apostate (SGLang Native)
 
-Native SGLang server deployment for **Qwopus3.6-27B-Coder-Compat-MTP-GGUF** with built-in MTP (Multi-Token Prediction) speculative decoding via the NEXTN algorithm.
+Native SGLang server deployment for **heterodoxin/gemma-4-e4b-it-apostate** — a 9B multimodal model (text + vision + audio) built on Gemma4 architecture.
 
 ## Model
 
-| Property           | Value                                                                                                               |
-| ------------------ | ------------------------------------------------------------------------------------------------------------------- |
-| Model              | [Jackrong/Qwopus3.6-27B-Coder-Compat-MTP-GGUF](https://huggingface.co/Jackrong/Qwopus3.6-27B-Coder-Compat-MTP-GGUF) |
-| Quantization       | Q4_K_M (~16.8 GB)                                                                                                   |
-| Architecture       | Dense Transformer, 27B params                                                                                       |
-| Base               | Qwen3.6-27B                                                                                                         |
-| MTP Heads          | 2 (built-in, no separate draft model)                                                                               |
-| MTP Acceptance     | 76.81%                                                                                                              |
-| Multimodal         | Yes (vision-capable)                                                                                                |
-| Native Context     | 32K (64K via YaRN scaling)                                                                                          |
-| SWE-bench Verified | 67.0% (thinking-off)                                                                                                |
+| Property       | Value                                                                                             |
+| -------------- | ------------------------------------------------------------------------------------------------- |
+| Model          | [heterodoxin/gemma-4-e4b-it-apostate](https://huggingface.co/heterodoxin/gemma-4-e4b-it-apostate) |
+| Format         | Safetensors BF16 (~17 GB, single `model.safetensors`)                                             |
+| Architecture   | Gemma4ForConditionalGeneration (9B params)                                                        |
+| Base           | google/gemma-4-e4b-it                                                                             |
+| Multimodal     | Text + Vision + Audio (all embedded in safetensors)                                               |
+| Native Context | 131K (using 32K for VRAM safety)                                                                  |
+| Edit Type      | Apostate (weight projection, refusal reduction: 95.8% → 29.5%)                                    |
 
 ## Quick Start
 
-### 0. Prequisites
+### 0. Prerequisites
 
 ```bash
 sudo apt install python3-full
@@ -26,7 +24,6 @@ pipx install uv
 uv venv
 source .venv/bin/activate
 uv pip install sglang
-./serve.sh start
 ```
 
 ### 1. Download the model
@@ -34,15 +31,15 @@ uv pip install sglang
 ```bash
 # From the project root (huggingface/ directory)
 cd /path/to/llm-lab-setup
-hf download heterodoxin/gemma-4-e4b-it-apostate \
-    --local-dir heterodoxin/gemma-4-e4b-it-apostate \
+huggingface-cli download heterodoxin/gemma-4-e4b-it-apostate \
+    --local-dir huggingface/heterodoxin/gemma-4-e4b-it-apostate \
     --include "*"
 ```
 
 ### 2. Start the server
 
 ```bash
-./sglang/Qwopus3.6-27B-Coder-MTP/serve.sh start
+./sglang/simple/serve.sh start
 ```
 
 ### 3. Test
@@ -50,13 +47,13 @@ hf download heterodoxin/gemma-4-e4b-it-apostate \
 ```bash
 curl http://localhost:1005/v1/completions \
   -H 'Content-Type: application/json' \
-  -d '{"model": "Qwopus3.6-27B-Coder-Compat-MTP-Q4_K_M", "prompt": "What is 2+2?", "max_tokens": 32}'
+  -d '{"model": "gemma-4-e4b-it-apostate", "prompt": "What is 2+2?", "max_tokens": 32}'
 ```
 
 ### 4. Stop
 
 ```bash
-./sglang/Qwopus3.6-27B-Coder-MTP/serve.sh stop
+./sglang/simple/serve.sh stop
 ```
 
 ## Script Commands
@@ -73,29 +70,33 @@ curl http://localhost:1005/v1/completions \
 
 ### Memory (RTX 3090, 24GB VRAM)
 
-| Parameter              | Value      | Reason                                                                             |
-| ---------------------- | ---------- | ---------------------------------------------------------------------------------- |
-| `mem-fraction-static`  | `0.75`     | Conservative for 24GB + 64K KV cache. Model is 16.8GB, leaving ~5.4GB for KV cache |
-| `max-running-requests` | `16`       | Lower concurrency to avoid OOM with 64K windows                                    |
-| `cuda-graph-max-bs`    | `24`       | Reduced from 32 for memory headroom                                                |
-| `kv-cache-dtype`       | `fp8_e5m2` | fp8 KV cache saves ~50% memory vs fp16                                             |
+| Parameter              | Value  | Reason                                                                                         |
+| ---------------------- | ------ | ---------------------------------------------------------------------------------------------- |
+| `mem-fraction-static`  | `0.90` | 9B BF16 = ~18GB model; 0.90 leaves ~2.2GB for KV cache + overhead                              |
+| `max-running-requests` | `16`   | Moderate concurrency for 9B model                                                              |
+| `cuda-graph-max-bs`    | `24`   | CUDA graph batch optimization                                                                  |
+| `kv-cache-dtype`       | `fp16` | **Gemma4 requires fp16 KV cache** — fp8 causes quality loss (repetitive tokens, context drift) |
 
-### MTP Speculative Decoding
+### Why `--kv-cache-dtype fp16`?
 
-| Parameter                      | Value   | Reason                                               |
-| ------------------------------ | ------- | ---------------------------------------------------- |
-| `speculative-algorithm`        | `NEXTN` | Built-in MTP heads in GGUF (no separate draft model) |
-| `speculative-num-steps`        | `3`     | 3 speculative steps per decode                       |
-| `speculative-eagle-topk`       | `1`     | Top-1 for NEXTN (matches Qwen3.6 best practice)      |
-| `speculative-num-draft-tokens` | `4`     | 4 draft tokens per step (up to 12 total)             |
+Gemma4 architecture uses **hybrid sliding-window attention** and **logit soft-capping** which produces massive activation outliers. Quantized KV caches (fp8, q8_0) cause catastrophic precision loss. This is documented across the workspace:
+
+- `sglang/Gemma-4-26B-A4B/README.md` — "KV Cache Must Be FP16"
+- `sglang/Gemma-4-26B-A4B/README.md` — "Always use `--kv-cache-dtype fp16` for Gemma models"
+
+### Multimodal
+
+The model's `config.json` contains `vision_config`, `audio_config`, and `video_token_id`. SGLang loads these automatically when `--enable-multimodal` is set — no separate mmproj file needed (unlike GGUF loaders).
 
 ### Context Length
 
-| Parameter              | Value   | Reason                                       |
-| ---------------------- | ------- | -------------------------------------------- |
-| `context-length`       | `65536` | 64K context via YaRN scaling (native is 32K) |
-| `chunked-prefill-size` | `16384` | Chunked prefill for long contexts            |
-| `max-prefill-tokens`   | `32768` | Prefill limit per request                    |
+| Parameter              | Value   | Reason                                      |
+| ---------------------- | ------- | ------------------------------------------- |
+| `context-length`       | `32768` | 32K — safe for 24GB VRAM with fp16 KV cache |
+| `chunked-prefill-size` | `16384` | Chunked prefill for long contexts           |
+| `max-prefill-tokens`   | `32768` | Prefill limit per request                   |
+
+> **Note**: The model supports up to 131K context natively. To extend beyond 32K, reduce `mem-fraction-static` and `max-running-requests` accordingly.
 
 ## Testing
 
@@ -117,10 +118,10 @@ curl http://localhost:1005/get_model_info | jq
 curl http://localhost:1005/v1/completions \
   -H 'Content-Type: application/json' \
   -d '{
-    "model": "Qwopus3.6-27B-Coder-Compat-MTP-Q4_K_M",
+    "model": "gemma-4-e4b-it-apostate",
     "prompt": "Write a Python function to sort a list:",
     "max_tokens": 256,
-    "temperature": 0.6
+    "temperature": 0.7
   }'
 ```
 
@@ -130,9 +131,9 @@ curl http://localhost:1005/v1/completions \
 curl http://localhost:1005/v1/chat/completions \
   -H 'Content-Type: application/json' \
   -d '{
-    "model": "Qwopus3.6-27B-Coder-Compat-MTP-Q4_K_M",
+    "model": "gemma-4-e4b-it-apostate",
     "messages": [
-      {"role": "user", "content": "Explain speculative decoding in one sentence."}
+      {"role": "user", "content": "Explain the Gemma4 architecture in one sentence."}
     ],
     "max_tokens": 128
   }'
@@ -144,7 +145,7 @@ curl http://localhost:1005/v1/chat/completions \
 curl http://localhost:1005/v1/chat/completions \
   -H 'Content-Type: application/json' \
   -d '{
-    "model": "Qwopus3.6-27B-Coder-Compat-MTP-Q4_K_M",
+    "model": "gemma-4-e4b-it-apostate",
     "messages": [
       {
         "role": "user",
@@ -164,23 +165,9 @@ curl http://localhost:1005/v1/chat/completions \
 
 If the server fails to start with OOM errors:
 
-1. **Reduce context**: Change `--context-length 65536` to `32768` (native)
-2. **Increase mem-fraction**: Change `--mem-fraction-static 0.75` to `0.80` with 32K context
+1. **Reduce context**: Change `--context-length 32768` to `16384`
+2. **Lower mem-fraction**: Change `--mem-fraction-static 0.90` to `0.85`
 3. **Lower concurrency**: Reduce `--max-running-requests` to `8`
-
-### MTP Not Active
-
-Check logs for NEXTN references:
-
-```bash
-grep -i "nextn\|specul\|mtp" serve.log
-```
-
-If MTP is not active, verify the GGUF file contains MTP tensors:
-
-```bash
-gguf-dump "$MODEL_FILE" | grep -i "mtp\|draft\|nextn"
-```
 
 ### Server Not Starting
 
@@ -196,15 +183,25 @@ Or follow in real-time:
 ./serve.sh logs
 ```
 
+### Port Conflict
+
+If port 1005 is in use:
+
+```bash
+ss -tlnp | grep 1005
+```
+
+Kill the process or change `PORT=1005` in `serve.sh` to another value.
+
 ## VRAM Budget (Approximate)
 
 ```
-Q4_K_M model weights:    ~16.8 GB
-KV cache (64K, fp8):     ~3.5 GB
-CUDA graphs:             ~0.5 GB
-Overhead / activations:  ~2.2 GB
+BF16 model weights:    ~18.0 GB
+KV cache (32K, fp16):  ~3.0 GB
+CUDA graphs:           ~0.5 GB
+Overhead / activations: ~1.0 GB
 ───────────────────────────────────
-Total:                   ~23.0 GB  (of 24 GB)
+Total:                 ~22.5 GB  (of 24 GB)
 ```
 
-The `0.75` mem-fraction leaves a safety margin for dynamic allocations.
+The `0.90` mem-fraction leaves a small safety margin for dynamic allocations.
