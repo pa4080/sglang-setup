@@ -7,9 +7,11 @@ MODEL_FILE="../../huggingface/heterodoxin/gemma-4-e4b-it-apostate"
 SERVED_NAME="gemma-4-e4b-it-apostate"
 
 
-CUDA_HOME=/usr/local/cuda-12.8
-PATH=$CUDA_HOME/bin:$PATH
-LD_LIBRARY_PATH=$CUDA_HOME/lib64:$LD_LIBRARY_PATH
+export CUDA_HOME=/usr/local/cuda-12.8
+export PATH=$CUDA_HOME/bin:$PATH
+export LD_LIBRARY_PATH=$CUDA_HOME/lib64:$LD_LIBRARY_PATH
+
+nvcc --version
 
 set -euo pipefail
 
@@ -19,7 +21,7 @@ PROJECT_ROOT="$(cd "$SCRIPT_DIR/../../.." && pwd)"
 
 MODEL_DIR="$PROJECT_ROOT/huggingface/heterodoxin/gemma-4-e4b-it-apostate"
 SERVED_NAME="gemma-4-e4b-it-apostate"
-PORT=1005
+PORT=10005
 PID_FILE="$SCRIPT_DIR/.server.pid"
 LOG_FILE="$SCRIPT_DIR/serve.log"
 
@@ -106,21 +108,22 @@ start() {
 	# Launch in background
 	# --kv-cache-dtype bfloat16
 	nohup python3 -m sglang.launch_server \
-		--model-path "$MODEL_DIR" \
-		--served-model-name "$SERVED_NAME" \
-		--port "$PORT" \
-		--host 0.0.0.0 \
-		--context-length 32768 \
-		--mem-fraction-static 0.70 \
-		--chunked-prefill-size 16384 \
-		--max-prefill-tokens 32768 \
-		--kv-cache-dtype fp8_e5m2 \
-		--max-running-requests 16 \
-		--cuda-graph-max-bs 16 \
-		--enable-multimodal \
-		--trust-remote-code \
-		--watchdog-timeout 600 \
-		1>>"$LOG_FILE" 2>&1 &
+    --model-path "$MODEL_DIR" \
+    --served-model-name "$SERVED_NAME" \
+    --port "$PORT" \
+    --host 0.0.0.0 \
+    --context-length 32768 \
+    --mem-fraction-static 0.85 \
+    --chunked-prefill-size 16384 \
+    --max-prefill-tokens 32768 \
+    --max-running-requests 8 \
+    --cuda-graph-max-bs 8 \
+    --cuda-graph-bs 1 2 4 6 8 \
+    --enable-multimodal \
+    --trust-remote-code \
+    --watchdog-timeout 600 \
+		--disable-cuda-graph \
+    1>>"$LOG_FILE" 2>&1 &
 
 	local pid=$!
 	echo "$pid" > "$PID_FILE"
