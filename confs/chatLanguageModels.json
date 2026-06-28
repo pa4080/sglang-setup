@@ -542,231 +542,6 @@
 				"maxOutputTokens": 65536
 			},
 			{
-				"id": "Ornith-1.0-35B-Q4-MTP2-160K",
-				"name": "Ornith-1.0-35B-Q4-MTP2-160K",
-				"url": "http://172.16.1.110:10005/v1/chat/completions",
-				"toolCalling": true,
-				"vision": false,
-				"streaming": true,
-				"apiType": "chat-completions",
-				"editTools": [
-					"apply-patch",
-					"code-rewrite",
-					"find-replace",
-					"multi-find-replace"
-				],
-				"thinking": true,
-				"supportsReasoningEffort": [
-					"low",
-					"medium",
-					"high"
-				],
-				"reasoningEffortFormat": "chat-completions",
-				"zeroDataRetentionEnabled": false,
-				"maxInputTokens": 122880,
-				"maxOutputTokens": 40960
-			},
-			{
-				"id": "Ornith-1.0-35B-Q4-MTP3-122K",
-				"name": "Ornith-1.0-35B-Q4-MTP3-122K",
-				"url": "http://172.16.1.110:10005/v1/chat/completions",
-				"toolCalling": true,
-				"vision": false,
-				"streaming": true,
-				"apiType": "chat-completions",
-				"editTools": [
-					"apply-patch",
-					"code-rewrite",
-					"find-replace",
-					"multi-find-replace"
-				],
-				"thinking": true,
-				"supportsReasoningEffort": [
-					"low",
-					"medium",
-					"high"
-				],
-				"reasoningEffortFormat": "chat-completions",
-				"zeroDataRetentionEnabled": false,
-				"maxInputTokens": 92160,
-				"maxOutputTokens": 30720
-			},
-			{
-				"id": "Qwen36-35B-A3B-MTP2-160K-Q4",
-				"name": "Qwen36-35B-A3B-MTP2-160K-Q4",
-				"url": "http://172.16.1.110:10005/v1/chat/completions",
-				"toolCalling": true,
-				"vision": false,
-				"streaming": true,
-				"apiType": "chat-completions",
-				"editTools": [
-					"apply-patch",
-					"code-rewrite",
-					"find-replace",
-					"multi-find-replace"
-				],
-				"thinking": true,
-				"supportsReasoningEffort": [
-					"low",
-					"medium",
-					"high"
-				],
-				"reasoningEffortFormat": "chat-completions",
-				"zeroDataRetentionEnabled": false,
-				"maxInputTokens": 122880,
-				"maxOutputTokens": 40960
-			},
-			{
-				"id": "Qwen36-35B-A3B-MTP3-122K-Q8",
-				"name": "Qwen36-35B-A3B-MTP3-122K-Q8",
-				"url": "http://172.16.1.110:10005/v1/chat/completions",
-				"toolCalling": true,
-				"vision": false,
-				"streaming": true,
-				"apiType": "chat-completions",
-				"editTools": [
-					"apply-patch",
-					"code-rewrite",
-					"find-replace",
-					"multi-find-replace"
-				],
-				"thinking": true,
-				"supportsReasoningEffort": [
-					"low",
-					"medium",
-					"high"
-				],
-				"reasoningEffortFormat": "chat-completions",
-				"zeroDataRetentionEnabled": false,
-				"maxInputTokens": 92160,
-				"maxOutputTokens": 30720
-			},
-			{
-				"id": "Ornith-1.0-35B-Q4-256K",
-				"name": "Ornith-1.0-35B-Q4-256K",
-				"url": "http://172.16.1.110:10005/v1/chat/completions",
-				"toolCalling": true,
-				"vision": false,
-				"streaming": true,
-				"apiType": "chat-completions",
-				"editTools": [
-					"apply-patch",
-					"code-rewrite",
-					"find-replace",
-					"multi-find-replace"
-				],
-				"thinking": true,
-				"supportsReasoningEffort": [
-					"low",
-					"medium",
-					"high"
-				],
-				"reasoningEffortFormat": "chat-completions",
-				"zeroDataRetentionEnabled": false,
-				"maxInputTokens": 196608,
-				"maxOutputTokens": 65536
-			},
-			{
-				"id": "Ornith-1.0-35B-Q4-256K-temp-1",
-				"name": "Ornith-1.0-35B-Q4-256K-temp-1",
-				"url": "http://172.16.1.110:10005/v1/chat/completions",
-				"toolCalling": true,
-				"vision": false,
-				"streaming": true,
-				"apiType": "chat-completions",
-				"editTools": [
-					"apply-patch",
-					"code-rewrite",
-					"find-replace",
-					"multi-find-replace"
-				],
-				"thinking": true,
-				"supportsReasoningEffort": [
-					"low",
-					"medium",
-					"high"
-				],
-				"reasoningEffortFormat": "chat-completions",
-				"zeroDataRetentionEnabled": false,
-				"maxInputTokens": 196608,
-				"maxOutputTokens": 65536
-			},
-			{
-				"id": "Ornith-1.0-35B-Q4-256K-presence-penalty-1-5",
-				"name": "Ornith-1.0-35B-Q4-256K-presence-penalty-1-5",
-				"url": "http://172.16.1.110:10005/v1/chat/completions",
-				"toolCalling": true,
-				"vision": false,
-				"streaming": true,
-				"apiType": "chat-completions",
-				"editTools": [
-					"apply-patch",
-					"code-rewrite",
-					"find-replace",
-					"multi-find-replace"
-				],
-				"thinking": true,
-				"supportsReasoningEffort": [
-					"low",
-					"medium",
-					"high"
-				],
-				"reasoningEffortFormat": "chat-completions",
-				"zeroDataRetentionEnabled": false,
-				"maxInputTokens": 196608,
-				"maxOutputTokens": 65536
-			},
-			{
-				"id": "Ornith-1.0-35B-Q4-MTP2-160K",
-				"name": "Ornith-1.0-35B-Q4-MTP2-160K",
-				"url": "http://172.16.1.110:10005/v1/chat/completions",
-				"toolCalling": true,
-				"vision": false,
-				"streaming": true,
-				"apiType": "chat-completions",
-				"editTools": [
-					"apply-patch",
-					"code-rewrite",
-					"find-replace",
-					"multi-find-replace"
-				],
-				"thinking": true,
-				"supportsReasoningEffort": [
-					"low",
-					"medium",
-					"high"
-				],
-				"reasoningEffortFormat": "chat-completions",
-				"zeroDataRetentionEnabled": false,
-				"maxInputTokens": 122880,
-				"maxOutputTokens": 40960
-			},
-			{
-				"id": "Ornith-1.0-35B-Q4-MTP3-122K",
-				"name": "Ornith-1.0-35B-Q4-MTP3-122K",
-				"url": "http://172.16.1.110:10005/v1/chat/completions",
-				"toolCalling": true,
-				"vision": false,
-				"streaming": true,
-				"apiType": "chat-completions",
-				"editTools": [
-					"apply-patch",
-					"code-rewrite",
-					"find-replace",
-					"multi-find-replace"
-				],
-				"thinking": true,
-				"supportsReasoningEffort": [
-					"low",
-					"medium",
-					"high"
-				],
-				"reasoningEffortFormat": "chat-completions",
-				"zeroDataRetentionEnabled": false,
-				"maxInputTokens": 92160,
-				"maxOutputTokens": 30720
-			},
-			{
 				"id": "Qwen36-35B-A3B-MTP2-160K-Q4",
 				"name": "Qwen36-35B-A3B-MTP2-160K-Q4",
 				"url": "http://172.16.1.110:10005/v1/chat/completions",
@@ -867,6 +642,281 @@
 				"maxOutputTokens": 65536
 			},
 			{
+				"id": "Ornith-1.0-35B-Q8-256K",
+				"name": "Ornith-1.0-35B-Q8-256K",
+				"url": "http://172.16.1.110:10005/v1/chat/completions",
+				"toolCalling": true,
+				"vision": false,
+				"streaming": true,
+				"apiType": "chat-completions",
+				"editTools": [
+					"apply-patch",
+					"code-rewrite",
+					"find-replace",
+					"multi-find-replace"
+				],
+				"thinking": true,
+				"supportsReasoningEffort": [
+					"low",
+					"medium",
+					"high"
+				],
+				"reasoningEffortFormat": "chat-completions",
+				"zeroDataRetentionEnabled": false,
+				"maxInputTokens": 196608,
+				"maxOutputTokens": 65536
+			},
+			{
+				"id": "Ornith-1.0-35B-MTP2-Compact-262K-Q4",
+				"name": "Ornith-1.0-35B-MTP2-Compact-262K-Q4",
+				"url": "http://172.16.1.110:10005/v1/chat/completions",
+				"toolCalling": true,
+				"vision": false,
+				"streaming": true,
+				"apiType": "chat-completions",
+				"editTools": [
+					"apply-patch",
+					"code-rewrite",
+					"find-replace",
+					"multi-find-replace"
+				],
+				"thinking": true,
+				"supportsReasoningEffort": [
+					"low",
+					"medium",
+					"high"
+				],
+				"reasoningEffortFormat": "chat-completions",
+				"zeroDataRetentionEnabled": false,
+				"maxInputTokens": 196608,
+				"maxOutputTokens": 65536
+			},
+			{
+				"id": "Ornith-1.0-35B-MTP2-Vision-Compact-262K-Q4",
+				"name": "Ornith-1.0-35B-MTP2-Vision-Compact-262K-Q4",
+				"url": "http://172.16.1.110:10005/v1/chat/completions",
+				"toolCalling": true,
+				"vision": true,
+				"streaming": true,
+				"apiType": "chat-completions",
+				"editTools": [
+					"apply-patch",
+					"code-rewrite",
+					"find-replace",
+					"multi-find-replace"
+				],
+				"thinking": true,
+				"supportsReasoningEffort": [
+					"low",
+					"medium",
+					"high"
+				],
+				"reasoningEffortFormat": "chat-completions",
+				"zeroDataRetentionEnabled": false,
+				"maxInputTokens": 196608,
+				"maxOutputTokens": 65536
+			},
+			{
+				"id": "Ornith-1.0-35B-MTP2-Vision-Compact-262K-Q8",
+				"name": "Ornith-1.0-35B-MTP2-Vision-Compact-262K-Q8",
+				"url": "http://172.16.1.110:10005/v1/chat/completions",
+				"toolCalling": true,
+				"vision": true,
+				"streaming": true,
+				"apiType": "chat-completions",
+				"editTools": [
+					"apply-patch",
+					"code-rewrite",
+					"find-replace",
+					"multi-find-replace"
+				],
+				"thinking": true,
+				"supportsReasoningEffort": [
+					"low",
+					"medium",
+					"high"
+				],
+				"reasoningEffortFormat": "chat-completions",
+				"zeroDataRetentionEnabled": false,
+				"maxInputTokens": 196608,
+				"maxOutputTokens": 65536
+			},
+			{
+				"id": "Ornith-1.0-35B-MTP-Compact-262K-Q8",
+				"name": "Ornith-1.0-35B-MTP-Compact-262K-Q8",
+				"url": "http://172.16.1.110:10005/v1/chat/completions",
+				"toolCalling": true,
+				"vision": false,
+				"streaming": true,
+				"apiType": "chat-completions",
+				"editTools": [
+					"apply-patch",
+					"code-rewrite",
+					"find-replace",
+					"multi-find-replace"
+				],
+				"thinking": true,
+				"supportsReasoningEffort": [
+					"low",
+					"medium",
+					"high"
+				],
+				"reasoningEffortFormat": "chat-completions",
+				"zeroDataRetentionEnabled": false,
+				"maxInputTokens": 196608,
+				"maxOutputTokens": 65536
+			},
+			{
+				"id": "Ornith-1.0-35B-Vision-Compact-262K-Q8",
+				"name": "Ornith-1.0-35B-Vision-Compact-262K-Q8",
+				"url": "http://172.16.1.110:10005/v1/chat/completions",
+				"toolCalling": true,
+				"vision": true,
+				"streaming": true,
+				"apiType": "chat-completions",
+				"editTools": [
+					"apply-patch",
+					"code-rewrite",
+					"find-replace",
+					"multi-find-replace"
+				],
+				"thinking": true,
+				"supportsReasoningEffort": [
+					"low",
+					"medium",
+					"high"
+				],
+				"reasoningEffortFormat": "chat-completions",
+				"zeroDataRetentionEnabled": false,
+				"maxInputTokens": 196608,
+				"maxOutputTokens": 65536
+			},
+			{
+				"id": "Ornith-1.0-35B-MTP2-Quality-128K-Q4",
+				"name": "Ornith-1.0-35B-MTP2-Quality-128K-Q4",
+				"url": "http://172.16.1.110:10005/v1/chat/completions",
+				"toolCalling": true,
+				"vision": false,
+				"streaming": true,
+				"apiType": "chat-completions",
+				"editTools": [
+					"apply-patch",
+					"code-rewrite",
+					"find-replace",
+					"multi-find-replace"
+				],
+				"thinking": true,
+				"supportsReasoningEffort": [
+					"low",
+					"medium",
+					"high"
+				],
+				"reasoningEffortFormat": "chat-completions",
+				"zeroDataRetentionEnabled": false,
+				"maxInputTokens": 98304,
+				"maxOutputTokens": 32768
+			},
+			{
+				"id": "Ornith-1.0-35B-MTP2-Vision-Quality-128K-Q4",
+				"name": "Ornith-1.0-35B-MTP2-Vision-Quality-128K-Q4",
+				"url": "http://172.16.1.110:10005/v1/chat/completions",
+				"toolCalling": true,
+				"vision": true,
+				"streaming": true,
+				"apiType": "chat-completions",
+				"editTools": [
+					"apply-patch",
+					"code-rewrite",
+					"find-replace",
+					"multi-find-replace"
+				],
+				"thinking": true,
+				"supportsReasoningEffort": [
+					"low",
+					"medium",
+					"high"
+				],
+				"reasoningEffortFormat": "chat-completions",
+				"zeroDataRetentionEnabled": false,
+				"maxInputTokens": 98304,
+				"maxOutputTokens": 32768
+			},
+			{
+				"id": "Ornith-1.0-35B-MTP2-Vision-Quality-128K-Q8",
+				"name": "Ornith-1.0-35B-MTP2-Vision-Quality-128K-Q8",
+				"url": "http://172.16.1.110:10005/v1/chat/completions",
+				"toolCalling": true,
+				"vision": true,
+				"streaming": true,
+				"apiType": "chat-completions",
+				"editTools": [
+					"apply-patch",
+					"code-rewrite",
+					"find-replace",
+					"multi-find-replace"
+				],
+				"thinking": true,
+				"supportsReasoningEffort": [
+					"low",
+					"medium",
+					"high"
+				],
+				"reasoningEffortFormat": "chat-completions",
+				"zeroDataRetentionEnabled": false,
+				"maxInputTokens": 98304,
+				"maxOutputTokens": 32768
+			},
+			{
+				"id": "Ornith-1.0-35B-MTP-Quality-128K-Q8",
+				"name": "Ornith-1.0-35B-MTP-Quality-128K-Q8",
+				"url": "http://172.16.1.110:10005/v1/chat/completions",
+				"toolCalling": true,
+				"vision": false,
+				"streaming": true,
+				"apiType": "chat-completions",
+				"editTools": [
+					"apply-patch",
+					"code-rewrite",
+					"find-replace",
+					"multi-find-replace"
+				],
+				"thinking": true,
+				"supportsReasoningEffort": [
+					"low",
+					"medium",
+					"high"
+				],
+				"reasoningEffortFormat": "chat-completions",
+				"zeroDataRetentionEnabled": false,
+				"maxInputTokens": 98304,
+				"maxOutputTokens": 32768
+			},
+			{
+				"id": "Ornith-1.0-35B-Vision-Quality-128K-Q8",
+				"name": "Ornith-1.0-35B-Vision-Quality-128K-Q8",
+				"url": "http://172.16.1.110:10005/v1/chat/completions",
+				"toolCalling": true,
+				"vision": true,
+				"streaming": true,
+				"apiType": "chat-completions",
+				"editTools": [
+					"apply-patch",
+					"code-rewrite",
+					"find-replace",
+					"multi-find-replace"
+				],
+				"thinking": true,
+				"supportsReasoningEffort": [
+					"low",
+					"medium",
+					"high"
+				],
+				"reasoningEffortFormat": "chat-completions",
+				"zeroDataRetentionEnabled": false,
+				"maxInputTokens": 98304,
+				"maxOutputTokens": 32768
+			},
+			{
 				"id": "Ornith-1.0-9B-Q4-256K",
 				"name": "Ornith-1.0-9B-Q4-256K",
 				"url": "http://172.16.1.110:10005/v1/chat/completions",
@@ -951,6 +1001,48 @@
 				"reasoningEffort": "high"
 			},
 			"Ornith-1.0-9B-Q4-256K": {
+				"reasoningEffort": "high"
+			},
+			"Ornith-1.0-35B-Q8-256K": {
+				"reasoningEffort": "high"
+			},
+			"Ornith-1.0-35B-MTP2-Compact-262K-Q4": {
+				"reasoningEffort": "high"
+			},
+			"Ornith-1.0-35B-MTP2-Vision-Compact-262K-Q4": {
+				"reasoningEffort": "high"
+			},
+			"Ornith-1.0-35B-MTP2-Vision-Compact-262K-Q8": {
+				"reasoningEffort": "high"
+			},
+			"Ornith-1.0-35B-MTP-Compact-262K-Q8": {
+				"reasoningEffort": "high"
+			},
+			"Ornith-1.0-35B-Vision-Compact-262K-Q8": {
+				"reasoningEffort": "high"
+			},
+			"Ornith-1.0-35B-MTP2-Quality-128K-Q4": {
+				"reasoningEffort": "high"
+			},
+			"Ornith-1.0-35B-MTP2-Vision-Quality-128K-Q4": {
+				"reasoningEffort": "high"
+			},
+			"Ornith-1.0-35B-MTP2-Vision-Quality-128K-Q8": {
+				"reasoningEffort": "high"
+			},
+			"Ornith-1.0-35B-MTP-Quality-128K-Q8": {
+				"reasoningEffort": "high"
+			},
+			"Ornith-1.0-35B-Vision-Quality-128K-Q8": {
+				"reasoningEffort": "high"
+			},
+			"Ornith-1.0-35B-Q4-256K": {
+				"reasoningEffort": "high"
+			},
+			"Ornith-1.0-35B-Q4-256K-temp-1": {
+				"reasoningEffort": "high"
+			},
+			"Ornith-1.0-35B-Q4-256K-presence-penalty-1-5": {
 				"reasoningEffort": "high"
 			}
 		}
