@@ -940,6 +940,81 @@
 				"zeroDataRetentionEnabled": false,
 				"maxInputTokens": 196608,
 				"maxOutputTokens": 65536
+			},
+			{
+				"id": "Ornith-1.0-9B-512K-Q80-Q8",
+				"name": "Ornith-1.0-9B-512K-Q80-Q8",
+				"url": "http://172.16.1.110:10005/v1/chat/completions",
+				"toolCalling": true,
+				"vision": false,
+				"streaming": true,
+				"apiType": "chat-completions",
+				"editTools": [
+					"apply-patch",
+					"code-rewrite",
+					"find-replace",
+					"multi-find-replace"
+				],
+				"thinking": true,
+				"supportsReasoningEffort": [
+					"low",
+					"medium",
+					"high"
+				],
+				"reasoningEffortFormat": "chat-completions",
+				"zeroDataRetentionEnabled": false,
+				"maxInputTokens": 393216,
+				"maxOutputTokens": 131072
+			},
+			{
+				"id": "Ornith-1.0-9B-1M-Q80-Q4",
+				"name": "Ornith-1.0-9B-1M-Q80-Q4",
+				"url": "http://172.16.1.110:10005/v1/chat/completions",
+				"toolCalling": true,
+				"vision": false,
+				"streaming": true,
+				"apiType": "chat-completions",
+				"editTools": [
+					"apply-patch",
+					"code-rewrite",
+					"find-replace",
+					"multi-find-replace"
+				],
+				"thinking": true,
+				"supportsReasoningEffort": [
+					"low",
+					"medium",
+					"high"
+				],
+				"reasoningEffortFormat": "chat-completions",
+				"zeroDataRetentionEnabled": false,
+				"maxInputTokens": 393216,
+				"maxOutputTokens": 131072
+			},
+			{
+				"id": "Ornith-1.0-9B-512K-Q80-Q4-MTP",
+				"name": "Ornith-1.0-9B-512K-Q80-Q4-MTP",
+				"url": "http://172.16.1.110:10005/v1/chat/completions",
+				"toolCalling": true,
+				"vision": false,
+				"streaming": true,
+				"apiType": "chat-completions",
+				"editTools": [
+					"apply-patch",
+					"code-rewrite",
+					"find-replace",
+					"multi-find-replace"
+				],
+				"thinking": true,
+				"supportsReasoningEffort": [
+					"low",
+					"medium",
+					"high"
+				],
+				"reasoningEffortFormat": "chat-completions",
+				"zeroDataRetentionEnabled": false,
+				"maxInputTokens": 393216,
+				"maxOutputTokens": 131072
 			}
 		],
 		"settings": {
@@ -1019,6 +1094,15 @@
 				"reasoningEffort": "high"
 			},
 			"Ornith-1.0-9B-256K-Q80-Q8-MTP": {
+				"reasoningEffort": "high"
+			},
+			"Ornith-1.0-9B-512K-Q80-Q8": {
+				"reasoningEffort": "high"
+			},
+			"Ornith-1.0-9B-1M-Q80-Q4": {
+				"reasoningEffort": "high"
+			},
+			"Ornith-1.0-9B-512K-Q80-Q4-MTP": {
 				"reasoningEffort": "high"
 			},
 			"Ornith-1.0-35B-256K-Q4": {
