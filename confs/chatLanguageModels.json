@@ -42,8 +42,8 @@
 		"apiKey": "${input:chat.lm.secret.-4b1abccd}",
 		"models": [
 			{
-				"id": "Qwopus-27B-Coder-160K-MTP2-Q4",
-				"name": "Qwopus-27B-Coder-160K-MTP2-Q4",
+				"id": "Qwopus-27B-Coder-160K-Q4-MTP2",
+				"name": "Qwopus-27B-Coder-160K-Q4-MTP2",
 				"url": "http://172.16.1.110:10005/v1/chat/completions",
 				"toolCalling": true,
 				"vision": false,
@@ -67,8 +67,8 @@
 				"maxOutputTokens": 40960
 			},
 			{
-				"id": "Qwopus-27B-Coder-122K-MTP3-Q8",
-				"name": "Qwopus-27B-Coder-122K-MTP3-Q8",
+				"id": "Qwopus-27B-Coder-122K-Q8-MTP3",
+				"name": "Qwopus-27B-Coder-122K-Q8-MTP3",
 				"url": "http://172.16.1.110:10005/v1/chat/completions",
 				"toolCalling": true,
 				"vision": false,
@@ -142,8 +142,8 @@
 				"maxOutputTokens": 65536
 			},
 			{
-				"id": "Qwopus-27B-Coder-256K-Vision-Q4",
-				"name": "Qwopus-27B-Coder-256K-Vision-Q4",
+				"id": "Qwopus-27B-Coder-256K-Q4-Vision",
+				"name": "Qwopus-27B-Coder-256K-Q4-Vision",
 				"url": "http://172.16.1.110:10005/v1/chat/completions",
 				"toolCalling": true,
 				"vision": true,
@@ -167,8 +167,8 @@
 				"maxOutputTokens": 65536
 			},
 			{
-				"id": "Qwopus-27B-Coder-160K-Vision-Q8",
-				"name": "Qwopus-27B-Coder-160K-Vision-Q8",
+				"id": "Qwopus-27B-Coder-160K-Q8-Vision",
+				"name": "Qwopus-27B-Coder-160K-Q8-Vision",
 				"url": "http://172.16.1.110:10005/v1/chat/completions",
 				"toolCalling": true,
 				"vision": true,
@@ -192,8 +192,8 @@
 				"maxOutputTokens": 40960
 			},
 			{
-				"id": "Qwopus-27B-Coder-128K-MTP2-Vision-Q8",
-				"name": "Qwopus-27B-Coder-128K-MTP2-Vision-Q8",
+				"id": "Qwopus-27B-Coder-128K-Q8-MTP2-Vision",
+				"name": "Qwopus-27B-Coder-128K-Q8-MTP2-Vision",
 				"url": "http://172.16.1.110:10005/v1/chat/completions",
 				"toolCalling": true,
 				"vision": true,
@@ -217,8 +217,8 @@
 				"maxOutputTokens": 32768
 			},
 			{
-				"id": "Gemma-4-26B-A4B-it-qat-MTP4-Vision-128K-Q8",
-				"name": "Gemma-4-26B-A4B-it-qat-MTP4-Vision-128K-Q8",
+				"id": "Gemma-4-26B-A4B-it-qat-128K-Q8-MTP4-Vision",
+				"name": "Gemma-4-26B-A4B-it-qat-128K-Q8-MTP4-Vision",
 				"url": "http://172.16.1.110:10005/v1/chat/completions",
 				"toolCalling": true,
 				"vision": true,
@@ -242,8 +242,8 @@
 				"maxOutputTokens": 32768
 			},
 			{
-				"id": "Gemma-4-26B-A4B-it-qat-Vision-128K-Q8",
-				"name": "Gemma-4-26B-A4B-it-qat-Vision-128K-Q8",
+				"id": "Gemma-4-26B-A4B-it-qat-128K-Q8-Vision",
+				"name": "Gemma-4-26B-A4B-it-qat-128K-Q8-Vision",
 				"url": "http://172.16.1.110:10005/v1/chat/completions",
 				"toolCalling": true,
 				"vision": true,
@@ -267,8 +267,8 @@
 				"maxOutputTokens": 32768
 			},
 			{
-				"id": "Gemma-4-26B-A4B-it-qat-MTP4-Vision-256K-Q8",
-				"name": "Gemma-4-26B-A4B-it-qat-MTP4-Vision-256K-Q8",
+				"id": "Gemma-4-26B-A4B-it-qat-256K-Q8-MTP4-Vision",
+				"name": "Gemma-4-26B-A4B-it-qat-256K-Q8-MTP4-Vision",
 				"url": "http://172.16.1.110:10005/v1/chat/completions",
 				"toolCalling": true,
 				"vision": true,
@@ -292,8 +292,8 @@
 				"maxOutputTokens": 65536
 			},
 			{
-				"id": "Gemma-4-26B-A4B-it-qat-Vision-256K-Q8",
-				"name": "Gemma-4-26B-A4B-it-qat-Vision-256K-Q8",
+				"id": "Gemma-4-26B-A4B-it-qat-256K-Q8-Vision",
+				"name": "Gemma-4-26B-A4B-it-qat-256K-Q8-Vision",
 				"url": "http://172.16.1.110:10005/v1/chat/completions",
 				"toolCalling": true,
 				"vision": true,
@@ -317,8 +317,8 @@
 				"maxOutputTokens": 65536
 			},
 			{
-				"id": "Gemma-4-31B-it-qat-MTP2-Vision-108K-Q4",
-				"name": "Gemma-4-31B-it-qat-MTP2-Vision-108K-Q4",
+				"id": "Gemma-4-31B-it-qat-108K-Q4-MTP2-Vision",
+				"name": "Gemma-4-31B-it-qat-108K-Q4-MTP2-Vision",
 				"url": "http://172.16.1.110:10005/v1/chat/completions",
 				"toolCalling": true,
 				"vision": true,
@@ -342,8 +342,8 @@
 				"maxOutputTokens": 27648
 			},
 			{
-				"id": "Gemma-4-31B-it-qat-Vision-116K-Q4",
-				"name": "Gemma-4-31B-it-qat-Vision-116K-Q4",
+				"id": "Gemma-4-31B-it-qat-116K-Q4-Vision",
+				"name": "Gemma-4-31B-it-qat-116K-Q4-Vision",
 				"url": "http://172.16.1.110:10005/v1/chat/completions",
 				"toolCalling": true,
 				"vision": true,
@@ -367,8 +367,8 @@
 				"maxOutputTokens": 29696
 			},
 			{
-				"id": "Gemma-4-31B-it-qat-MTP4-128K-Q4",
-				"name": "Gemma-4-31B-it-qat-MTP4-128K-Q4",
+				"id": "Gemma-4-31B-it-qat-128K-Q4-MTP4",
+				"name": "Gemma-4-31B-it-qat-128K-Q4-MTP4",
 				"url": "http://172.16.1.110:10005/v1/chat/completions",
 				"toolCalling": true,
 				"vision": true,
@@ -392,8 +392,8 @@
 				"maxOutputTokens": 32768
 			},
 			{
-				"id": "Qwen36-35B-A3B-MTP2-Vision-256K-Q4",
-				"name": "Qwen36-35B-A3B-MTP2-Vision-256K-Q4",
+				"id": "Qwen36-35B-A3B-256K-Q4-MTP2-Vision",
+				"name": "Qwen36-35B-A3B-256K-Q4-MTP2-Vision",
 				"url": "http://172.16.1.110:10005/v1/chat/completions",
 				"toolCalling": true,
 				"vision": true,
@@ -417,8 +417,8 @@
 				"maxOutputTokens": 65536
 			},
 			{
-				"id": "Qwen36-35B-A3B-MTP2-Vision-256K-Q8",
-				"name": "Qwen36-35B-A3B-MTP2-Vision-256K-Q8",
+				"id": "Qwen36-35B-A3B-256K-Q8-MTP2-Vision",
+				"name": "Qwen36-35B-A3B-256K-Q8-MTP2-Vision",
 				"url": "http://172.16.1.110:10005/v1/chat/completions",
 				"toolCalling": true,
 				"vision": true,
@@ -442,8 +442,8 @@
 				"maxOutputTokens": 65536
 			},
 			{
-				"id": "Ornith-1.0-35B-Q4-256K",
-				"name": "Ornith-1.0-35B-Q4-256K",
+				"id": "Ornith-1.0-35B-256K-Q4",
+				"name": "Ornith-1.0-35B-256K-Q4",
 				"url": "http://172.16.1.110:10005/v1/chat/completions",
 				"toolCalling": true,
 				"vision": false,
@@ -467,8 +467,8 @@
 				"maxOutputTokens": 65536
 			},
 			{
-				"id": "Ornith-1.0-35B-Q4-256K-temp-1",
-				"name": "Ornith-1.0-35B-Q4-256K-temp-1",
+				"id": "Ornith-1.0-35B-256K-Q4-temp-1",
+				"name": "Ornith-1.0-35B-256K-Q4-temp-1",
 				"url": "http://172.16.1.110:10005/v1/chat/completions",
 				"toolCalling": true,
 				"vision": false,
@@ -492,8 +492,158 @@
 				"maxOutputTokens": 65536
 			},
 			{
-				"id": "Qwen36-35B-A3B-MTP2-160K-Q4",
-				"name": "Qwen36-35B-A3B-MTP2-160K-Q4",
+				"id": "Ornith-1.0-35B-256K-Q4-Vision",
+				"name": "Ornith-1.0-35B-256K-Q4-Vision",
+				"url": "http://172.16.1.110:10005/v1/chat/completions",
+				"toolCalling": true,
+				"vision": true,
+				"streaming": true,
+				"apiType": "chat-completions",
+				"editTools": [
+					"apply-patch",
+					"code-rewrite",
+					"find-replace",
+					"multi-find-replace"
+				],
+				"thinking": true,
+				"supportsReasoningEffort": [
+					"low",
+					"medium",
+					"high"
+				],
+				"reasoningEffortFormat": "chat-completions",
+				"zeroDataRetentionEnabled": false,
+				"maxInputTokens": 196608,
+				"maxOutputTokens": 65536
+			},
+			{
+				"id": "Ornith-1.0-35B-256K-Q8",
+				"name": "Ornith-1.0-35B-256K-Q8",
+				"url": "http://172.16.1.110:10005/v1/chat/completions",
+				"toolCalling": true,
+				"vision": false,
+				"streaming": true,
+				"apiType": "chat-completions",
+				"editTools": [
+					"apply-patch",
+					"code-rewrite",
+					"find-replace",
+					"multi-find-replace"
+				],
+				"thinking": true,
+				"supportsReasoningEffort": [
+					"low",
+					"medium",
+					"high"
+				],
+				"reasoningEffortFormat": "chat-completions",
+				"zeroDataRetentionEnabled": false,
+				"maxInputTokens": 196608,
+				"maxOutputTokens": 65536
+			},
+			{
+				"id": "Ornith-1.0-35B-256K-Q8-MTP-Compact",
+				"name": "Ornith-1.0-35B-256K-Q8-MTP-Compact",
+				"url": "http://172.16.1.110:10005/v1/chat/completions",
+				"toolCalling": true,
+				"vision": false,
+				"streaming": true,
+				"apiType": "chat-completions",
+				"editTools": [
+					"apply-patch",
+					"code-rewrite",
+					"find-replace",
+					"multi-find-replace"
+				],
+				"thinking": true,
+				"supportsReasoningEffort": [
+					"low",
+					"medium",
+					"high"
+				],
+				"reasoningEffortFormat": "chat-completions",
+				"zeroDataRetentionEnabled": false,
+				"maxInputTokens": 196608,
+				"maxOutputTokens": 65536
+			},
+			{
+				"id": "Ornith-1.0-35B-256K-Q8-Vision-Compact",
+				"name": "Ornith-1.0-35B-256K-Q8-Vision-Compact",
+				"url": "http://172.16.1.110:10005/v1/chat/completions",
+				"toolCalling": true,
+				"vision": true,
+				"streaming": true,
+				"apiType": "chat-completions",
+				"editTools": [
+					"apply-patch",
+					"code-rewrite",
+					"find-replace",
+					"multi-find-replace"
+				],
+				"thinking": true,
+				"supportsReasoningEffort": [
+					"low",
+					"medium",
+					"high"
+				],
+				"reasoningEffortFormat": "chat-completions",
+				"zeroDataRetentionEnabled": false,
+				"maxInputTokens": 196608,
+				"maxOutputTokens": 65536
+			},
+			{
+				"id": "Ornith-1.0-35B-256K-Q8-MTP-Vision-Compact",
+				"name": "Ornith-1.0-35B-256K-Q8-MTP-Vision-Compact",
+				"url": "http://172.16.1.110:10005/v1/chat/completions",
+				"toolCalling": true,
+				"vision": true,
+				"streaming": true,
+				"apiType": "chat-completions",
+				"editTools": [
+					"apply-patch",
+					"code-rewrite",
+					"find-replace",
+					"multi-find-replace"
+				],
+				"thinking": true,
+				"supportsReasoningEffort": [
+					"low",
+					"medium",
+					"high"
+				],
+				"reasoningEffortFormat": "chat-completions",
+				"zeroDataRetentionEnabled": false,
+				"maxInputTokens": 196608,
+				"maxOutputTokens": 65536
+			},
+			{
+				"id": "Ornith-1.0-35B-128K-Q4-MTP-Quality",
+				"name": "Ornith-1.0-35B-128K-Q4-MTP-Quality",
+				"url": "http://172.16.1.110:10005/v1/chat/completions",
+				"toolCalling": true,
+				"vision": true,
+				"streaming": true,
+				"apiType": "chat-completions",
+				"editTools": [
+					"apply-patch",
+					"code-rewrite",
+					"find-replace",
+					"multi-find-replace"
+				],
+				"thinking": true,
+				"supportsReasoningEffort": [
+					"low",
+					"medium",
+					"high"
+				],
+				"reasoningEffortFormat": "chat-completions",
+				"zeroDataRetentionEnabled": false,
+				"maxInputTokens": 196608,
+				"maxOutputTokens": 65536
+			},
+			{
+				"id": "Qwen36-35B-A3B-160K-Q4-MTP2",
+				"name": "Qwen36-35B-A3B-160K-Q4-MTP2",
 				"url": "http://172.16.1.110:10005/v1/chat/completions",
 				"toolCalling": true,
 				"vision": false,
@@ -517,8 +667,8 @@
 				"maxOutputTokens": 40960
 			},
 			{
-				"id": "Qwen36-35B-A3B-MTP3-122K-Q8",
-				"name": "Qwen36-35B-A3B-MTP3-122K-Q8",
+				"id": "Qwen36-35B-A3B-122K-Q8-MTP3",
+				"name": "Qwen36-35B-A3B-122K-Q8-MTP3",
 				"url": "http://172.16.1.110:10005/v1/chat/completions",
 				"toolCalling": true,
 				"vision": false,
@@ -542,8 +692,8 @@
 				"maxOutputTokens": 30720
 			},
 			{
-				"id": "Qwen36-35B-A3B-MTP-256K-Q8",
-				"name": "Qwen36-35B-A3B-MTP-256K-Q8",
+				"id": "Qwen36-35B-A3B-256K-Q8-MTP",
+				"name": "Qwen36-35B-A3B-256K-Q8-MTP",
 				"url": "http://172.16.1.110:10005/v1/chat/completions",
 				"toolCalling": true,
 				"vision": false,
@@ -567,8 +717,8 @@
 				"maxOutputTokens": 65536
 			},
 			{
-				"id": "Qwen36-35B-A3B-Vision-256K-Q8",
-				"name": "Qwen36-35B-A3B-Vision-256K-Q8",
+				"id": "Qwen36-35B-A3B-256K-Q8-Vision",
+				"name": "Qwen36-35B-A3B-256K-Q8-Vision",
 				"url": "http://172.16.1.110:10005/v1/chat/completions",
 				"toolCalling": true,
 				"vision": true,
@@ -592,283 +742,8 @@
 				"maxOutputTokens": 65536
 			},
 			{
-				"id": "Ornith-1.0-35B-Q8-256K",
-				"name": "Ornith-1.0-35B-Q8-256K",
-				"url": "http://172.16.1.110:10005/v1/chat/completions",
-				"toolCalling": true,
-				"vision": false,
-				"streaming": true,
-				"apiType": "chat-completions",
-				"editTools": [
-					"apply-patch",
-					"code-rewrite",
-					"find-replace",
-					"multi-find-replace"
-				],
-				"thinking": true,
-				"supportsReasoningEffort": [
-					"low",
-					"medium",
-					"high"
-				],
-				"reasoningEffortFormat": "chat-completions",
-				"zeroDataRetentionEnabled": false,
-				"maxInputTokens": 196608,
-				"maxOutputTokens": 65536
-			},
-			{
-				"id": "Ornith-1.0-35B-MTP2-Compact-262K-Q4",
-				"name": "Ornith-1.0-35B-MTP2-Compact-262K-Q4",
-				"url": "http://172.16.1.110:10005/v1/chat/completions",
-				"toolCalling": true,
-				"vision": false,
-				"streaming": true,
-				"apiType": "chat-completions",
-				"editTools": [
-					"apply-patch",
-					"code-rewrite",
-					"find-replace",
-					"multi-find-replace"
-				],
-				"thinking": true,
-				"supportsReasoningEffort": [
-					"low",
-					"medium",
-					"high"
-				],
-				"reasoningEffortFormat": "chat-completions",
-				"zeroDataRetentionEnabled": false,
-				"maxInputTokens": 196608,
-				"maxOutputTokens": 65536
-			},
-			{
-				"id": "Ornith-1.0-35B-MTP2-Vision-Compact-262K-Q4",
-				"name": "Ornith-1.0-35B-MTP2-Vision-Compact-262K-Q4",
-				"url": "http://172.16.1.110:10005/v1/chat/completions",
-				"toolCalling": true,
-				"vision": true,
-				"streaming": true,
-				"apiType": "chat-completions",
-				"editTools": [
-					"apply-patch",
-					"code-rewrite",
-					"find-replace",
-					"multi-find-replace"
-				],
-				"thinking": true,
-				"supportsReasoningEffort": [
-					"low",
-					"medium",
-					"high"
-				],
-				"reasoningEffortFormat": "chat-completions",
-				"zeroDataRetentionEnabled": false,
-				"maxInputTokens": 196608,
-				"maxOutputTokens": 65536
-			},
-			{
-				"id": "Ornith-1.0-35B-MTP2-Vision-Compact-262K-Q8",
-				"name": "Ornith-1.0-35B-MTP2-Vision-Compact-262K-Q8",
-				"url": "http://172.16.1.110:10005/v1/chat/completions",
-				"toolCalling": true,
-				"vision": true,
-				"streaming": true,
-				"apiType": "chat-completions",
-				"editTools": [
-					"apply-patch",
-					"code-rewrite",
-					"find-replace",
-					"multi-find-replace"
-				],
-				"thinking": true,
-				"supportsReasoningEffort": [
-					"low",
-					"medium",
-					"high"
-				],
-				"reasoningEffortFormat": "chat-completions",
-				"zeroDataRetentionEnabled": false,
-				"maxInputTokens": 196608,
-				"maxOutputTokens": 65536
-			},
-			{
-				"id": "Ornith-1.0-35B-MTP-Compact-262K-Q8",
-				"name": "Ornith-1.0-35B-MTP-Compact-262K-Q8",
-				"url": "http://172.16.1.110:10005/v1/chat/completions",
-				"toolCalling": true,
-				"vision": false,
-				"streaming": true,
-				"apiType": "chat-completions",
-				"editTools": [
-					"apply-patch",
-					"code-rewrite",
-					"find-replace",
-					"multi-find-replace"
-				],
-				"thinking": true,
-				"supportsReasoningEffort": [
-					"low",
-					"medium",
-					"high"
-				],
-				"reasoningEffortFormat": "chat-completions",
-				"zeroDataRetentionEnabled": false,
-				"maxInputTokens": 196608,
-				"maxOutputTokens": 65536
-			},
-			{
-				"id": "Ornith-1.0-35B-Vision-Compact-262K-Q8",
-				"name": "Ornith-1.0-35B-Vision-Compact-262K-Q8",
-				"url": "http://172.16.1.110:10005/v1/chat/completions",
-				"toolCalling": true,
-				"vision": true,
-				"streaming": true,
-				"apiType": "chat-completions",
-				"editTools": [
-					"apply-patch",
-					"code-rewrite",
-					"find-replace",
-					"multi-find-replace"
-				],
-				"thinking": true,
-				"supportsReasoningEffort": [
-					"low",
-					"medium",
-					"high"
-				],
-				"reasoningEffortFormat": "chat-completions",
-				"zeroDataRetentionEnabled": false,
-				"maxInputTokens": 196608,
-				"maxOutputTokens": 65536
-			},
-			{
-				"id": "Ornith-1.0-35B-MTP2-Quality-128K-Q4",
-				"name": "Ornith-1.0-35B-MTP2-Quality-128K-Q4",
-				"url": "http://172.16.1.110:10005/v1/chat/completions",
-				"toolCalling": true,
-				"vision": false,
-				"streaming": true,
-				"apiType": "chat-completions",
-				"editTools": [
-					"apply-patch",
-					"code-rewrite",
-					"find-replace",
-					"multi-find-replace"
-				],
-				"thinking": true,
-				"supportsReasoningEffort": [
-					"low",
-					"medium",
-					"high"
-				],
-				"reasoningEffortFormat": "chat-completions",
-				"zeroDataRetentionEnabled": false,
-				"maxInputTokens": 98304,
-				"maxOutputTokens": 32768
-			},
-			{
-				"id": "Ornith-1.0-35B-MTP2-Vision-Quality-128K-Q4",
-				"name": "Ornith-1.0-35B-MTP2-Vision-Quality-128K-Q4",
-				"url": "http://172.16.1.110:10005/v1/chat/completions",
-				"toolCalling": true,
-				"vision": true,
-				"streaming": true,
-				"apiType": "chat-completions",
-				"editTools": [
-					"apply-patch",
-					"code-rewrite",
-					"find-replace",
-					"multi-find-replace"
-				],
-				"thinking": true,
-				"supportsReasoningEffort": [
-					"low",
-					"medium",
-					"high"
-				],
-				"reasoningEffortFormat": "chat-completions",
-				"zeroDataRetentionEnabled": false,
-				"maxInputTokens": 98304,
-				"maxOutputTokens": 32768
-			},
-			{
-				"id": "Ornith-1.0-35B-MTP2-Vision-Quality-128K-Q8",
-				"name": "Ornith-1.0-35B-MTP2-Vision-Quality-128K-Q8",
-				"url": "http://172.16.1.110:10005/v1/chat/completions",
-				"toolCalling": true,
-				"vision": true,
-				"streaming": true,
-				"apiType": "chat-completions",
-				"editTools": [
-					"apply-patch",
-					"code-rewrite",
-					"find-replace",
-					"multi-find-replace"
-				],
-				"thinking": true,
-				"supportsReasoningEffort": [
-					"low",
-					"medium",
-					"high"
-				],
-				"reasoningEffortFormat": "chat-completions",
-				"zeroDataRetentionEnabled": false,
-				"maxInputTokens": 98304,
-				"maxOutputTokens": 32768
-			},
-			{
-				"id": "Ornith-1.0-35B-MTP-Quality-128K-Q8",
-				"name": "Ornith-1.0-35B-MTP-Quality-128K-Q8",
-				"url": "http://172.16.1.110:10005/v1/chat/completions",
-				"toolCalling": true,
-				"vision": false,
-				"streaming": true,
-				"apiType": "chat-completions",
-				"editTools": [
-					"apply-patch",
-					"code-rewrite",
-					"find-replace",
-					"multi-find-replace"
-				],
-				"thinking": true,
-				"supportsReasoningEffort": [
-					"low",
-					"medium",
-					"high"
-				],
-				"reasoningEffortFormat": "chat-completions",
-				"zeroDataRetentionEnabled": false,
-				"maxInputTokens": 98304,
-				"maxOutputTokens": 32768
-			},
-			{
-				"id": "Ornith-1.0-35B-Vision-Quality-128K-Q8",
-				"name": "Ornith-1.0-35B-Vision-Quality-128K-Q8",
-				"url": "http://172.16.1.110:10005/v1/chat/completions",
-				"toolCalling": true,
-				"vision": true,
-				"streaming": true,
-				"apiType": "chat-completions",
-				"editTools": [
-					"apply-patch",
-					"code-rewrite",
-					"find-replace",
-					"multi-find-replace"
-				],
-				"thinking": true,
-				"supportsReasoningEffort": [
-					"low",
-					"medium",
-					"high"
-				],
-				"reasoningEffortFormat": "chat-completions",
-				"zeroDataRetentionEnabled": false,
-				"maxInputTokens": 98304,
-				"maxOutputTokens": 32768
-			},
-			{
-				"id": "Ornith-1.0-9B-Q4-256K",
-				"name": "Ornith-1.0-9B-Q4-256K",
+				"id": "Ornith-1.0-9B-256K-Q4",
+				"name": "Ornith-1.0-9B-256K-Q4",
 				"url": "http://172.16.1.110:10005/v1/chat/completions",
 				"toolCalling": true,
 				"vision": false,
@@ -893,10 +768,10 @@
 			}
 		],
 		"settings": {
-			"Qwopus-27B-Coder-160K-MTP2-Q4": {
+			"Qwopus-27B-Coder-160K-Q4-MTP2": {
 				"reasoningEffort": "high"
 			},
-			"Qwopus-27B-Coder-122K-MTP3-Q8": {
+			"Qwopus-27B-Coder-122K-Q8-MTP3": {
 				"reasoningEffort": "high"
 			},
 			"Qwopus-27B-Coder-256K-Q4-temp-1": {
@@ -905,88 +780,73 @@
 			"Qwopus-27B-Coder-256K-Q4": {
 				"reasoningEffort": "high"
 			},
-			"Qwopus-27B-Coder-256K-Vision-Q4": {
+			"Qwopus-27B-Coder-256K-Q4-Vision": {
 				"reasoningEffort": "high"
 			},
-			"Qwopus-27B-Coder-160K-Vision-Q8": {
+			"Qwopus-27B-Coder-160K-Q8-Vision": {
 				"reasoningEffort": "high"
 			},
-			"Qwopus-27B-Coder-128K-MTP2-Vision-Q8": {
+			"Qwopus-27B-Coder-128K-Q8-MTP2-Vision": {
 				"reasoningEffort": "high"
 			},
-			"Gemma-4-26B-A4B-it-qat-MTP4-Vision-128K-Q8": {
+			"Gemma-4-26B-A4B-it-qat-128K-Q8-MTP4-Vision": {
 				"reasoningEffort": "high"
 			},
-			"Gemma-4-26B-A4B-it-qat-Vision-128K-Q8": {
+			"Gemma-4-26B-A4B-it-qat-128K-Q8-Vision": {
 				"reasoningEffort": "high"
 			},
-			"Gemma-4-26B-A4B-it-qat-MTP4-Vision-256K-Q8": {
+			"Gemma-4-26B-A4B-it-qat-256K-Q8-MTP4-Vision": {
 				"reasoningEffort": "high"
 			},
-			"Gemma-4-26B-A4B-it-qat-Vision-256K-Q8": {
+			"Gemma-4-26B-A4B-it-qat-256K-Q8-Vision": {
 				"reasoningEffort": "high"
 			},
-			"Gemma-4-31B-it-qat-MTP2-Vision-108K-Q4": {
+			"Gemma-4-31B-it-qat-108K-Q4-MTP2-Vision": {
 				"reasoningEffort": "high"
 			},
-			"Gemma-4-31B-it-qat-Vision-116K-Q4": {
+			"Gemma-4-31B-it-qat-116K-Q4-Vision": {
 				"reasoningEffort": "high"
 			},
-			"Gemma-4-31B-it-qat-MTP4-128K-Q4": {
+			"Gemma-4-31B-it-qat-128K-Q4-MTP4": {
 				"reasoningEffort": "high"
 			},
-			"Qwen36-35B-A3B-MTP2-Vision-256K-Q4": {
+			"Qwen36-35B-A3B-256K-Q4-MTP2-Vision": {
 				"reasoningEffort": "high"
 			},
-			"Qwen36-35B-A3B-MTP2-Vision-256K-Q8": {
+			"Qwen36-35B-A3B-256K-Q8-MTP2-Vision": {
 				"reasoningEffort": "high"
 			},
-			"Qwen36-35B-A3B-MTP-256K-Q8": {
+			"Qwen36-35B-A3B-256K-Q8-MTP": {
 				"reasoningEffort": "high"
 			},
-			"Qwen36-35B-A3B-Vision-256K-Q8": {
+			"Qwen36-35B-A3B-256K-Q8-Vision": {
 				"reasoningEffort": "high"
 			},
-			"Ornith-1.0-9B-Q4-256K": {
+			"Ornith-1.0-9B-256K-Q4": {
 				"reasoningEffort": "high"
 			},
-			"Ornith-1.0-35B-Q8-256K": {
+			"Ornith-1.0-35B-256K-Q4": {
 				"reasoningEffort": "high"
 			},
-			"Ornith-1.0-35B-MTP2-Compact-262K-Q4": {
+			"Ornith-1.0-35B-256K-Q4-temp-1": {
 				"reasoningEffort": "high"
 			},
-			"Ornith-1.0-35B-MTP2-Vision-Compact-262K-Q4": {
+			"Ornith-1.0-35B-256K-Q4-Vision": {
 				"reasoningEffort": "high"
 			},
-			"Ornith-1.0-35B-MTP2-Vision-Compact-262K-Q8": {
+			"Ornith-1.0-35B-256K-Q8": {
 				"reasoningEffort": "high"
 			},
-			"Ornith-1.0-35B-MTP-Compact-262K-Q8": {
+			"Ornith-1.0-35B-256K-Q8-MTP-Compact": {
 				"reasoningEffort": "high"
 			},
-			"Ornith-1.0-35B-Vision-Compact-262K-Q8": {
+			"Ornith-1.0-35B-256K-Q8-Vision-Compact": {
 				"reasoningEffort": "high"
 			},
-			"Ornith-1.0-35B-MTP2-Quality-128K-Q4": {
+			"Ornith-1.0-35B-256K-Q8-MTP-Vision-Compact": {
 				"reasoningEffort": "high"
 			},
-			"Ornith-1.0-35B-MTP2-Vision-Quality-128K-Q4": {
-				"reasoningEffort": "high"
-			},
-			"Ornith-1.0-35B-MTP2-Vision-Quality-128K-Q8": {
-				"reasoningEffort": "high"
-			},
-			"Ornith-1.0-35B-MTP-Quality-128K-Q8": {
-				"reasoningEffort": "high"
-			},
-			"Ornith-1.0-35B-Vision-Quality-128K-Q8": {
-				"reasoningEffort": "high"
-			},
-			"Ornith-1.0-35B-Q4-256K": {
-				"reasoningEffort": "high"
-			},
-			"Ornith-1.0-35B-Q4-256K-temp-1": {
+			"Ornith-1.0-35B-128K-Q4-MTP-Quality": {
 				"reasoningEffort": "high"
 			}
 		}
